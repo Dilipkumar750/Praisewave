@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { FaStar, FaWhatsapp, FaQuoteLeft } from 'react-icons/fa6'
-import { HiArrowRight, HiSparkles, HiCheckBadge } from 'react-icons/hi2'
-import { FiCheck, FiUsers, FiAward, FiHeart, FiMessageSquare } from 'react-icons/fi'
+import { HiArrowRight, HiCheckBadge, HiSparkles } from 'react-icons/hi2'
+import { FiUsers, FiAward, FiHeart, FiCheck, FiMessageSquare } from 'react-icons/fi'
 
 const testimonials = [
   {
@@ -84,7 +84,7 @@ const testimonials = [
 const stats = [
   { label: '5-Star Average Rating', value: '5.0 ★', icon: <FaStar className="w-5 h-5 text-amber-400" /> },
   { label: '1-on-1 Dedicated Classes', value: '100%', icon: <FiUsers className="w-5 h-5 text-cyan-400" /> },
-  { label: 'Passionate Student Community', value: '9+ Years', icon: <FiAward className="w-5 h-5 text-purple-400" /> },
+  { label: 'Passionate Student Community', value: '10+ Years', icon: <FiAward className="w-5 h-5 text-purple-400" /> },
   { label: 'Parent & Student Satisfaction', value: '100%', icon: <FiHeart className="w-5 h-5 text-pink-400" /> },
 ]
 

@@ -1,17 +1,13 @@
-import { FaWhatsapp } from 'react-icons/fa6'
-import { FaChurch } from 'react-icons/fa6'
+import { FaWhatsapp, FaChurch } from 'react-icons/fa6'
 import { HiArrowRight, HiSparkles } from 'react-icons/hi2'
 import { FiCheck } from 'react-icons/fi'
-import { MdOutlineLibraryMusic } from 'react-icons/md'
 import {
   gospelWorshipImg,
   gospelKeysDawImg,
   gospelMentorshipImg,
   gospelDawImg,
   gospelMinistryImg,
-  gospelGrowthImg,
-  theoryImg,
-  pianoImg
+  gospelGrowthImg
 } from '../../assets/images'
 
 const waLink = (title) =>
@@ -230,10 +226,10 @@ const GospelProduction = () => {
             const color = isGold
               ? 'linear-gradient(to top, #f97316, #fbbf24)'
               : isOrange
-              ? 'linear-gradient(to top, #ea580c, #f97316)'
-              : isCyan
-              ? 'linear-gradient(to top, #1d4ed8, #06b6d4)'
-              : 'linear-gradient(to top, #6d28d9, #7c3aed)'
+                ? 'linear-gradient(to top, #ea580c, #f97316)'
+                : isCyan
+                  ? 'linear-gradient(to top, #1d4ed8, #06b6d4)'
+                  : 'linear-gradient(to top, #6d28d9, #7c3aed)'
             return (
               <div
                 key={i}
@@ -330,9 +326,9 @@ const GospelProduction = () => {
               {/* Feature pills */}
               <div className="flex flex-wrap gap-2">
                 {[
-                  { label: 'Live 1-on-1',    color: '#7c3aed' },
+                  { label: 'Live 1-on-1', color: '#7c3aed' },
                   { label: 'Gospel-Focused', color: '#f97316' },
-                  { label: 'DAW Training',   color: '#fbbf24' },
+                  { label: 'DAW Training', color: '#fbbf24' },
                   { label: 'Ministry Ready', color: '#06b6d4' },
                 ].map(tag => (
                   <span key={tag.label}
@@ -379,10 +375,10 @@ const GospelProduction = () => {
                 {/* ── DAW Track Lanes ── */}
                 <div className="px-4 pt-3.5 pb-2.5">
                   {[
-                    { name: 'Keyboard',  color: '#7c3aed', bars: [90, 60, 80, 40, 95, 55, 70, 85, 45, 75, 30, 90] },
-                    { name: 'Choir',     color: '#f97316', bars: [50, 80, 30, 90, 65, 45, 75, 55, 85, 40, 70, 60] },
-                    { name: 'Beat',      color: '#fbbf24', bars: [70, 95, 50, 80, 35, 90, 60, 75, 45, 85, 55, 70] },
-                    { name: 'Bass',      color: '#06b6d4', bars: [40, 65, 85, 30, 70, 90, 50, 60, 80, 35, 75, 55] },
+                    { name: 'Keyboard', color: '#7c3aed', bars: [90, 60, 80, 40, 95, 55, 70, 85, 45, 75, 30, 90] },
+                    { name: 'Choir', color: '#f97316', bars: [50, 80, 30, 90, 65, 45, 75, 55, 85, 40, 70, 60] },
+                    { name: 'Beat', color: '#fbbf24', bars: [70, 95, 50, 80, 35, 90, 60, 75, 45, 85, 55, 70] },
+                    { name: 'Bass', color: '#06b6d4', bars: [40, 65, 85, 30, 70, 90, 50, 60, 80, 35, 75, 55] },
                   ].map((track) => (
                     <div key={track.name} className="flex items-center gap-2.5 mb-2">
                       {/* Track label */}
@@ -431,12 +427,12 @@ const GospelProduction = () => {
                       const dur = (0.5 + (i % 5) * 0.18).toFixed(2)
                       const delay = ((i % 8) * 0.09).toFixed(2)
                       const isGold = i > 26
-                      const isMid  = i > 18
+                      const isMid = i > 18
                       const c = isGold
                         ? 'linear-gradient(to top, #f97316, #fbbf24)'
                         : isMid
-                        ? 'linear-gradient(to top, #7c3aed, #f97316)'
-                        : 'linear-gradient(to top, #1d4ed8, #7c3aed)'
+                          ? 'linear-gradient(to top, #7c3aed, #f97316)'
+                          : 'linear-gradient(to top, #1d4ed8, #7c3aed)'
                       return (
                         <div key={i} className="flex-1 rounded-t-sm"
                           style={{
@@ -453,9 +449,9 @@ const GospelProduction = () => {
                 {/* ── Bottom Stat Row ── */}
                 <div className="grid grid-cols-3 gap-0 border-t" style={{ borderColor: 'rgba(124,58,237,0.18)' }}>
                   {[
-                    { label: 'Sessions',   value: '1-on-1',  color: '#7c3aed' },
-                    { label: 'Duration',   value: 'Flexible', color: '#f97316' },
-                    { label: 'Focus',      value: 'Gospel',  color: '#fbbf24' },
+                    { label: 'Sessions', value: '1-on-1', color: '#7c3aed' },
+                    { label: 'Duration', value: 'Flexible', color: '#f97316' },
+                    { label: 'Focus', value: 'Gospel', color: '#fbbf24' },
                   ].map((s, i) => (
                     <div key={s.label}
                       className={`py-2.5 text-center ${i < 2 ? 'border-r' : ''}`}
@@ -567,7 +563,7 @@ const GospelProduction = () => {
             >
               {/* Card Inner Split: Left Column (Image & Heading) / Right Column (Details & Points) */}
               <div className="grid grid-cols-1 sm:grid-cols-12 h-full">
-                
+
                 {/* ── Left Side: Image + Badge + Heading ── */}
                 <div className="sm:col-span-5 flex flex-col bg-slate-950/40 border-b sm:border-b-0 sm:border-r border-white/10 relative">
                   {/* Image Container */}
@@ -578,7 +574,7 @@ const GospelProduction = () => {
                       className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f1e] via-[#0a0f1e]/40 to-transparent" />
-                    
+
                     {/* Floating Category Tag */}
                     <div className="absolute top-3 left-3 px-2.5 py-0.5 rounded-full text-[10px] font-extrabold uppercase tracking-wider backdrop-blur-md bg-black/70 border border-white/20 text-white shadow-md">
                       {card.tag}

@@ -89,10 +89,6 @@ const Footer = () => {
               </div>
             </Link>
 
-            <p className="text-sm text-slate-400 leading-relaxed max-w-sm">
-              Chennai's premier music academy dedicated to nurturing artistic talent with Trinity College London & ABRSM accredited instruction for all skill levels.
-            </p>
-
             {/* Studio Address Box */}
             <div className="glass-card rounded-2xl p-3.5 border border-white/10 mt-1 max-w-md">
               <div className="flex items-start gap-2.5">
@@ -179,7 +175,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
           <div>
-            © {new Date().getFullYear()} PraiseWave Music Academy. All rights reserved. designed by <a href="www.linkedin.com/in/dilip-kumar750" target="_blank" rel="noopener noreferrer" className="text-cyan-300 hover:text-cyan-400 transition-colors">Dilipkumar</a> 
+            © {new Date().getFullYear()} PraiseWave Music Academy. All rights reserved. designed by <a href="https://www.linkedin.com/in/dilip-kumar750" target="_blank" rel="noopener noreferrer" className="text-cyan-300 hover:text-cyan-400 transition-colors">Dilipkumar</a> 
           </div>
         </div>
       </div>

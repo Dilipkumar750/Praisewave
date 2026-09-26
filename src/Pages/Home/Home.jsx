@@ -1,10 +1,9 @@
 import Hero from './Hero'
-import { Link } from 'react-router-dom'
-import { pianoImg, calix, guitarImg, vocalImg, violinImg, drumsImg, theoryImg, logoImg } from '../../assets/images'
-import { FaWhatsapp, FaChurch, FaMusic } from 'react-icons/fa6'
+import { pianoImg, calix, drumsImg, theoryImg, logoImg } from '../../assets/images'
+import { FaWhatsapp, FaChurch } from 'react-icons/fa6'
 import { GiGrandPiano, GiMetronome, GiMusicalScore, GiPianoKeys } from 'react-icons/gi'
 import { HiArrowRight, HiSparkles } from 'react-icons/hi2'
-import { FiCheck, FiArrowRight, FiClock, FiUsers, FiAward, FiGlobe } from 'react-icons/fi'
+import { FiCheck, FiArrowRight } from 'react-icons/fi'
 
 /* ─── Instruments Ticker Data ──────────────────── */
 const tickerItems = [
@@ -16,122 +15,6 @@ const tickerItems = [
   'Drum Kit & Percussion',
   'Music Theory & Sight Reading',
   'Trinity & ABRSM Grades 1-8',
-]
-
-/* ─── Why Choose PraiseWave ─────────────────────── */
-const features = [
-  {
-    title: 'Trinity & ABRSM Syllabus',
-    desc: 'Structured international exam preparation with 100% past pass rate and grade distinctions.',
-    badge: 'International',
-    icon: <FiAward className="w-6 h-6 text-purple-400" />,
-  },
-  {
-    title: '1-on-1 Personalized Mentorship',
-    desc: 'Every student progresses at their own pace with customized practice routines and weekly feedback.',
-    badge: 'Dedicated',
-    icon: <FiUsers className="w-6 h-6 text-cyan-400" />,
-  },
-  {
-    title: 'Free 30-Minute Trial Class',
-    desc: 'Experience our world-class teaching methodology firsthand before committing. Zero obligations.',
-    badge: 'Free',
-    icon: <FiClock className="w-6 h-6 text-amber-400" />,
-  },
-  {
-    title: 'Hybrid Studio & Online Learning',
-    desc: 'Attend in-person at our Chennai sound-treated acoustic studios or high-fidelity online via HD video.',
-    badge: 'Flexible',
-    icon: <FiGlobe className="w-6 h-6 text-emerald-400" />,
-  },
-  {
-    title: 'Ear-Training & Stage Performance',
-    desc: 'Regular acoustic jams, annual live concert recitals, and backing band ensemble opportunities.',
-    badge: 'Stage Ready',
-    icon: <FaMusic className="w-6 h-6 text-rose-400" />,
-  },
-  {
-    title: 'Instrument Lending & Guidance',
-    desc: 'Don’t own an instrument yet? Use our academy pianos, guitars, and drum kits while you learn.',
-    badge: 'Support',
-    icon: <GiGrandPiano className="w-6 h-6 text-indigo-400" />,
-  },
-]
-
-/* ─── Course Highlights with Photos ────────────── */
-const courses = [
-  {
-    id: 'piano',
-    title: 'Piano & Keyboard',
-    level: 'Beginner to Grade 8',
-    desc: 'Classical Bach & Chopin to contemporary pop improvisation and ear transcription.',
-    tag: 'Most Popular',
-    color: 'from-purple-500/20 to-indigo-500/10',
-    border: 'hover:border-purple-500/50',
-    duration: '3 Months Module',
-    fee: '₹2,500/mo',
-    image: pianoImg,
-  },
-  {
-    id: 'guitar',
-    title: 'Acoustic & Electric Guitar',
-    level: 'Chords to Lead Solos',
-    desc: 'Fingerpicking, open chords, pentatonic scales, tabs reading, and rock rhythm.',
-    tag: 'Fast Track',
-    color: 'from-amber-500/20 to-rose-500/10',
-    border: 'hover:border-amber-500/50',
-    duration: '3 Months Module',
-    fee: '₹2,000/mo',
-    image: guitarImg,
-  },
-  {
-    id: 'vocals',
-    title: 'Western & Indian Vocals',
-    level: 'Pitch & Range Expansion',
-    desc: 'Diaphragmatic breathing, vocal health, vibrato control, and stage presence.',
-    tag: 'High Demand',
-    color: 'from-pink-500/20 to-fuchsia-500/10',
-    border: 'hover:border-pink-500/50',
-    duration: '3 Months Module',
-    fee: '₹1,800/mo',
-    image: vocalImg,
-  },
-  {
-    id: 'violin',
-    title: 'Classical Violin',
-    level: 'Bowing & Posture Mastery',
-    desc: 'Precision intonation, Suzuki method, classical pieces, and cinematic violin melodies.',
-    tag: 'Expert Mentors',
-    color: 'from-cyan-500/20 to-blue-500/10',
-    border: 'hover:border-cyan-500/50',
-    duration: '4 Months Module',
-    fee: '₹2,800/mo',
-    image: violinImg,
-  },
-  {
-    id: 'drums',
-    title: 'Drum Kit & Percussion',
-    level: 'Groove & Polyrhythms',
-    desc: 'Limb independence, 40 standard rudiments, double bass technique, and band timing.',
-    tag: 'High Energy',
-    color: 'from-yellow-500/20 to-amber-500/10',
-    border: 'hover:border-yellow-500/50',
-    duration: '3 Months Module',
-    fee: '₹2,200/mo',
-    image: drumsImg,
-  },
-  {
-    id: 'theory',
-    title: 'Music Theory & Composition',
-    level: 'ABRSM Grade 5 Prep',
-    desc: 'Key signatures, chord progressions, harmonic analysis, and digital songwriting basics.',
-    tag: 'Certification',
-    color: 'from-emerald-500/20 to-teal-500/10',
-    border: 'hover:border-emerald-500/50',
-    duration: '2 Months Module',
-    fee: '₹1,500/mo',
-    image: theoryImg,
-  },
 ]
 
 const keyboardCurriculum = [
@@ -223,7 +106,7 @@ const Home = () => {
 
             <div className="space-y-5 text-slate-300 text-base sm:text-lg leading-relaxed">
               <p className="p-4 rounded-2xl bg-purple-950/30 border border-purple-500/20 text-white font-medium">
-                Praisewave Music Academy was founded by <strong className="text-cyan-300 font-bold">Calix Joshua</strong>, a passionate Gospel musician with <strong>9+ years of experience</strong> in music and <strong>6+ years of experience</strong> in music production.
+                Praisewave Music Academy was founded by <strong className="text-cyan-300 font-bold">Calix Joshua</strong>, a passionate Gospel musician with <strong>10+ years of experience</strong> in music and <strong>8+ years of experience</strong> in music production.
               </p>
 
               <p>
@@ -270,7 +153,7 @@ const Home = () => {
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#080c20] via-transparent to-black/20" />
-                
+
                 <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between">
                   <div className="flex items-center gap-2.5">
                     <div className="w-10 h-10 rounded-xl bg-white p-0.5 shadow-lg">
@@ -287,12 +170,12 @@ const Home = () => {
               {/* Stats Grid */}
               <div className="grid grid-cols-2 gap-3.5">
                 <div className="glass-card rounded-2xl p-4 border border-white/10 text-center">
-                  <div className="text-2xl font-black gradient-text-vibrant">9+ Years</div>
+                  <div className="text-2xl font-black gradient-text-vibrant">10+ Years</div>
                   <div className="text-xs text-slate-300 font-semibold mt-0.5">Music Experience</div>
                 </div>
 
                 <div className="glass-card rounded-2xl p-4 border border-white/10 text-center">
-                  <div className="text-2xl font-black gradient-text-gold">6+ Years</div>
+                  <div className="text-2xl font-black gradient-text-gold">8+ Years</div>
                   <div className="text-xs text-slate-300 font-semibold mt-0.5">Music Production</div>
                 </div>
               </div>

@@ -1,9 +1,8 @@
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
 import { pianoImg, guitarImg, vocalImg, violinImg, drumsImg } from '../../assets/images'
-import { FaWhatsapp, FaGuitar, FaMicrophone, FaMusic, FaStar } from 'react-icons/fa6'
+import { FaWhatsapp, FaGuitar, FaMicrophone } from 'react-icons/fa6'
 import { GiGrandPiano, GiViolin, GiDrumKit } from 'react-icons/gi'
-import { HiArrowRight, HiSparkles, HiCheckBadge } from 'react-icons/hi2'
+import { HiArrowRight, HiSparkles } from 'react-icons/hi2'
 import { FiCheck, FiArrowRight } from 'react-icons/fi'
 
 const featuredInstruments = [

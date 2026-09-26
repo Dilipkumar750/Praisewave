@@ -152,7 +152,7 @@ const theoryPlans = [
     title: 'Music Theory — Grade 1',
     category: 'Theory',
     level: 'Level: 0 → Grade 1',
-    fee: '₹1,299',
+    fee: '₹1,099',
     period: '/ Month',
     desc: 'Build your music theory foundation with structured lessons from the basics.',
     features: [
