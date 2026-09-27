@@ -6,30 +6,30 @@ import { FiPhone, FiMail, FiClock, FiMapPin, FiCheck } from 'react-icons/fi'
 
 const faqs = [
   {
-    q: 'What is the minimum age to join PraiseWave?',
-    a: 'We welcome enthusiastic learners from age 5 through adults of all ages! For young learners, we employ fun, interactive, rhythm-based methods that nurture a lifelong love for music.',
+    q: 'Are all PraiseWave courses conducted online?',
+    a: 'Yes, 100%! All our keyboard, music theory, and gospel production courses are conducted live online in a dedicated 1-on-1 interactive format with high-definition multi-angle camera views and direct-line studio audio.',
   },
   {
-    q: 'Are online music classes as effective as in-person studio lessons?',
-    a: 'Yes, absolutely. Our instructors use multi-angle HD cameras and studio-grade direct-line audio so you can clearly see finger placements, hand posture, and hear studio-quality sound without latency.',
+    q: 'How effective are live 1-on-1 online keyboard classes?',
+    a: 'Our 1-on-1 online sessions are highly interactive and engaging. With multi-angle views of keyboard keys, hand posture, and crystal-clear direct audio without background latency, you get personal real-time feedback just like sitting in the same room.',
   },
   {
     q: 'Is the 30-minute trial class really 100% free?',
-    a: 'Yes, completely free with zero commitment or payment info needed. It is a dedicated 30-minute 1-on-1 session where we assess your musical goals and show you our methodology.',
+    a: 'Yes, completely free with zero commitment or payment info needed. It is a dedicated 30-minute 1-on-1 live online session where we assess your musical goals and walk you through our methodology.',
   },
   {
-    q: 'Do I need to own an instrument before starting?',
-    a: 'Not right away! For studio students in Chennai, we provide grand pianos, guitars, and drum kits. For online students, our advisors will guide you on the best instruments to purchase within your budget.',
+    q: 'Do I need a keyboard at home before joining?',
+    a: 'You will need a keyboard or digital piano at home for your live online lessons and daily practice. If you are planning to buy one, our instructor will happily guide you on the best model for your budget.',
   },
   {
-    q: 'Can I prepare for Trinity College London or ABRSM exams here?',
-    a: 'Yes. We are an authorized training partner for both Trinity College London and ABRSM. We provide full syllabus coverage, ear-training, sight reading, and mock exams.',
+    q: 'What is the schedule and class duration?',
+    a: 'Each course includes 8 live 1-on-1 classes per month. Each individual session is 45 to 50 minutes long, with flexible available slots (Morning, Evening, or Weekends) tailored to your convenience.',
   },
 ]
 
 const contactCards = [
   {
-    title: 'Chennai Studio Location',
+    title: 'Academy Headquarters',
     desc: 'Vasudeva Garden, No 26/24b, 2nd Ave, Anna Ayyar Thottam, Ponniammanmedu, Chennai, Tamil Nadu 600110',
     actionText: 'Open Google Maps Directions',
     actionHref: 'https://maps.google.com/?q=Vasudeva+Garden+No+26/24b+2nd+Ave+Anna+Ayyar+Thottam+Ponniammanmedu+Chennai+Tamil+Nadu+600110',
@@ -37,9 +37,9 @@ const contactCards = [
   },
   {
     title: 'Direct Phone & Hotline',
-    desc: '+91 95006 03579',
-    actionText: 'Call Studio Advisor',
-    actionHref: 'tel:+919500603579',
+    desc: '+91 93614 92530',
+    actionText: 'Call Admissions Advisor',
+    actionHref: 'tel:+919361492530',
     icon: <FiPhone className="w-5 h-5 text-cyan-400" />,
   },
   {
@@ -50,10 +50,10 @@ const contactCards = [
     icon: <FiMail className="w-5 h-5 text-pink-400" />,
   },
   {
-    title: 'Visiting Hours',
+    title: 'Admissions & Support Hours',
     desc: 'Mon – Sat: 9:00 AM – 8:00 PM (Sun by Appt)',
-    actionText: 'Book Weekend Slot',
-    actionHref: 'https://wa.me/919500603579?text=Hi%20PraiseWave!%20I%20would%20like%20to%20visit%20the%20studio%20this%20weekend.',
+    actionText: 'Book Trial Slot',
+    actionHref: 'https://wa.me/919361492530?text=Hi%20PraiseWave!%20I%20would%20like%20to%20book%20an%20online%20trial%20class.',
     icon: <FiClock className="w-5 h-5 text-amber-400" />,
   },
 ]
@@ -63,7 +63,7 @@ const Contact = () => {
     name: '',
     phone: '',
     instrument: 'Piano & Keyboard',
-    learningMode: 'In-Studio (Chennai)',
+    learningMode: 'Live 1-on-1 Online Class (Flexible Slot)',
     message: '',
   })
   const [openFaq, setOpenFaq] = useState(0)
@@ -77,7 +77,7 @@ const Contact = () => {
     const text = encodeURIComponent(
       `Hello PraiseWave Music Academy! 👋\n\n*Name:* ${form.name}\n*Phone:* ${form.phone}\n*Instrument of Interest:* ${form.instrument}\n*Learning Mode:* ${form.learningMode}\n*Notes / Questions:* ${form.message || 'I would like to schedule my free 30-minute trial class.'}`
     )
-    window.open(`https://wa.me/919500603579?text=${text}`, '_blank')
+    window.open(`https://wa.me/919361492530?text=${text}`, '_blank')
   }
 
   return (
@@ -192,7 +192,7 @@ const Contact = () => {
             </p>
 
             <a
-              href="https://wa.me/919500603579?text=Hi%20PraiseWave!%20I%20would%20like%20to%20learn%20more%20about%20your%20music%20classes."
+              href="https://wa.me/919361492530?text=Hi%20PraiseWave!%20I%20would%20like%20to%20learn%20more%20about%20your%20music%20classes."
               target="_blank"
               rel="noopener noreferrer"
               className="btn-whatsapp w-full !text-sm !py-3.5 shadow-lg shadow-emerald-950/50 flex items-center justify-center gap-2.5 group"
@@ -305,20 +305,18 @@ const Contact = () => {
                   onChange={handleChange}
                   className="glass-input w-full px-4 py-3 rounded-xl text-sm cursor-pointer"
                 >
-                  <option value="Piano & Keyboard" className="bg-[#0b0f24] text-white">Piano & Keyboard (Classical & Pop)</option>
-                  <option value="Acoustic & Electric Guitar" className="bg-[#0b0f24] text-white">Acoustic & Electric Guitar</option>
-                  <option value="Western Vocals" className="bg-[#0b0f24] text-white">Western Vocals & Breath Mastery</option>
-                  <option value="Carnatic Vocals" className="bg-[#0b0f24] text-white">Carnatic Classical Vocals</option>
-                  <option value="Violin" className="bg-[#0b0f24] text-white">Violin (Classical & Suzuki)</option>
-                  <option value="Drums & Percussion" className="bg-[#0b0f24] text-white">Drum Kit & Percussion</option>
-                  <option value="Music Theory & Composition" className="bg-[#0b0f24] text-white">Music Theory & Ear Training</option>
+                  <option value="Piano & Keyboard (₹1,699/mo)" className="bg-[#0b0f24] text-white">Piano & Keyboard — Beginner Basics (₹1,699/mo)</option>
+                  <option value="Keyboard + Music Theory (₹2,499/mo)" className="bg-[#0b0f24] text-white">Keyboard + Music Theory (₹2,499/mo)</option>
+                  <option value="Intermediate Keyboard (₹2,999/mo)" className="bg-[#0b0f24] text-white">Intermediate Keyboard — Advanced Chords (₹2,999/mo)</option>
+                  <option value="Gospel Electronic Production with Mix & Mastering (₹19,999)" className="bg-[#0b0f24] text-white">Gospel Electronic Production with Mix &amp; Mastering (₹19,999)</option>
+                  <option value="Keyboard + Gospel Production Bundle (₹24,999)" className="bg-[#0b0f24] text-white">Keyboard + Gospel Production Bundle (₹24,999)</option>
                 </select>
               </div>
 
               {/* Learning Mode Preference */}
               <div>
                 <label htmlFor="contact-form-mode" className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">
-                  Preferred Mode *
+                  Class Format &amp; Timing Preference *
                 </label>
                 <select
                   id="contact-form-mode"
@@ -327,9 +325,10 @@ const Contact = () => {
                   onChange={handleChange}
                   className="glass-input w-full px-4 py-3 rounded-xl text-sm cursor-pointer"
                 >
-                  <option value="In-Studio (Chennai Acoustic Studio)" className="bg-[#0b0f24] text-white">In-Studio (Chennai Studio)</option>
-                  <option value="Live 1-on-1 Online Class" className="bg-[#0b0f24] text-white">Live 1-on-1 Online Class (HD Audio)</option>
-                  <option value="Hybrid (Both Studio & Online)" className="bg-[#0b0f24] text-white">Hybrid (Studio + Online)</option>
+                  <option value="Live 1-on-1 Online (Morning Slot)" className="bg-[#0b0f24] text-white">Live 1-on-1 Online (Morning Slot)</option>
+                  <option value="Live 1-on-1 Online (Evening Slot)" className="bg-[#0b0f24] text-white">Live 1-on-1 Online (Evening Slot)</option>
+                  <option value="Live 1-on-1 Online (Weekend Slot)" className="bg-[#0b0f24] text-white">Live 1-on-1 Online (Weekend Slot)</option>
+                  <option value="Live 1-on-1 Online (Flexible Timing)" className="bg-[#0b0f24] text-white">Live 1-on-1 Online (Flexible Timing)</option>
                 </select>
               </div>
 
@@ -342,7 +341,7 @@ const Contact = () => {
                   id="contact-form-message"
                   name="message"
                   rows={3}
-                  placeholder="e.g. Complete beginner / want to clear Grade 3 Trinity / prefer weekend mornings..."
+                  placeholder="e.g. Complete beginner / want to improve chord knowledge / prefer weekend mornings..."
                   value={form.message}
                   onChange={handleChange}
                   className="glass-input w-full px-4 py-3 rounded-xl text-sm resize-none"

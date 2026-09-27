@@ -1,5 +1,5 @@
 import Hero from './Hero'
-import { pianoImg, calix, drumsImg, theoryImg, logoImg } from '../../assets/images'
+import { pianoImg, calix, theoryImg, logoImg } from '../../assets/images'
 import { FaWhatsapp, FaChurch } from 'react-icons/fa6'
 import { GiGrandPiano, GiMetronome, GiMusicalScore, GiPianoKeys } from 'react-icons/gi'
 import { HiArrowRight, HiSparkles } from 'react-icons/hi2'
@@ -8,13 +8,13 @@ import { FiCheck, FiArrowRight } from 'react-icons/fi'
 /* ─── Instruments Ticker Data ──────────────────── */
 const tickerItems = [
   'Grand Piano & Keyboard',
-  'Acoustic & Electric Guitar',
-  'Western Vocal Technique',
-  'Carnatic Vocal Classical',
-  'Classical & Film Violin',
-  'Drum Kit & Percussion',
+  'Church-Based Keyboard Playing',
+  'Keyboard Basics to Intermediate',
   'Music Theory & Sight Reading',
-  'Trinity & ABRSM Grades 1-8',
+  'Chord Progressions & Harmony',
+  'Backing Grooves & Reharmonisation',
+  'Live 1-on-1 Sessions',
+  'Worship & Ministry Skills',
 ]
 
 const keyboardCurriculum = [
@@ -130,7 +130,7 @@ const Home = () => {
               </a>
 
               <a
-                href="https://wa.me/919500603579?text=Hi%20Calix%20Joshua!%20I%20would%20like%20to%20know%20more%20about%20Praisewave%20Music%20Academy."
+                href="https://wa.me/919361492530?text=Hi%20Calix%20Joshua!%20I%20would%20like%20to%20know%20more%20about%20Praisewave%20Music%20Academy."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-secondary !text-sm !py-3.5 !px-6 flex items-center gap-2 group"
@@ -277,7 +277,8 @@ const Home = () => {
                 Get full access to the complete beginner keyboard syllabus, guided mentorship, and practice stems.
               </p>
               <div className="text-3xl font-black gradient-text-gold mb-1">₹1,699</div>
-              <div className="text-[11px] text-slate-400">Monthly · Beginner Keyboard Course</div>
+              <div className="text-[11px] text-slate-300 font-medium">Monthly 8 Classes · 45–50 Mins / Class</div>
+              <div className="text-[10px] text-cyan-400 mt-0.5">Flexible Available Slots</div>
             </div>
 
             <a
@@ -332,85 +333,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ─── Life at PraiseWave: Studio & Recital Showcase ──── */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <div className="text-center max-w-3xl mx-auto mb-14">
-          <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-purple-500/10 text-purple-300 border border-purple-500/20 mb-4">
-            Visual Experience
-          </span>
-          <h2 className="font-heading font-black text-3xl sm:text-4xl text-white tracking-tight mb-4">
-            Life Inside PraiseWave Music Academy
-          </h2>
-          <p className="text-slate-300 text-sm sm:text-base">
-            From focused 1-on-1 acoustic sessions to church worship and recital rehearsals in Chennai.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* Showcase Item 1: Piano & Theory Suite */}
-          <div className="glass-card rounded-3xl overflow-hidden border border-white/10 group">
-            <div className="relative h-56 overflow-hidden">
-              <img
-                src={pianoImg}
-                alt="Keyboard Masterclass"
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#080b1f] via-transparent to-black/30" />
-              <span className="absolute bottom-3 left-4 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-purple-600/80 text-white backdrop-blur-md">
-                Keyboard Studio Suite
-              </span>
-            </div>
-            <div className="p-5">
-              <h3 className="font-bold text-base text-white mb-1.5">Acoustic Piano & Keyboard</h3>
-              <p className="text-xs text-slate-400 leading-relaxed">
-                Dedicated keyboard stations for understanding hand posture, notes, chords, and smooth musical phrasing.
-              </p>
-            </div>
-          </div>
-
-          {/* Showcase Item 2: Vocal & Recording Booth */}
-          <div className="glass-card rounded-3xl overflow-hidden border border-white/10 group">
-            <div className="relative h-56 overflow-hidden">
-              <img
-                src={theoryImg}
-                alt="Music Production Workspace"
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#080b1f] via-transparent to-black/30" />
-              <span className="absolute bottom-3 left-4 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-pink-600/80 text-white backdrop-blur-md">
-                Music Theory & Production
-              </span>
-            </div>
-            <div className="p-5">
-              <h3 className="font-bold text-base text-white mb-1.5">Music Theory & Sound Craft</h3>
-              <p className="text-xs text-slate-400 leading-relaxed">
-                Learn rhythm, scales, chord progressions, and how songs are arranged for live worship and performance.
-              </p>
-            </div>
-          </div>
-
-          {/* Showcase Item 3: Live Recital Arena */}
-          <div className="glass-card rounded-3xl overflow-hidden border border-white/10 group">
-            <div className="relative h-56 overflow-hidden">
-              <img
-                src={drumsImg}
-                alt="Live Stage & Recitals"
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#080b1f] via-transparent to-black/30" />
-              <span className="absolute bottom-3 left-4 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-cyan-600/80 text-white backdrop-blur-md">
-                Stage & Recitals
-              </span>
-            </div>
-            <div className="p-5">
-              <h3 className="font-bold text-base text-white mb-1.5">Worship & Stage Recitals</h3>
-              <p className="text-xs text-slate-400 leading-relaxed">
-                Build confidence playing with live accompaniments, developing genuine stage presence and ministry skills.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* ─── Ready to Start Your Musical Journey? CTA Banner ──── */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
@@ -438,7 +360,7 @@ const Home = () => {
               </a>
 
               <a
-                href="https://wa.me/919500603579?text=Hi%20PraiseWave!%20I%20want%20to%20enroll%20in%20keyboard%20training."
+                href="https://wa.me/919361492530?text=Hi%20PraiseWave!%20I%20want%20to%20enroll%20in%20keyboard%20training."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-whatsapp text-sm py-4 px-8 w-full sm:w-auto shadow-xl flex items-center justify-center gap-2 group"

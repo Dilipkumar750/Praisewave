@@ -91,7 +91,7 @@ const Popup = () => {
         {/* Action Buttons */}
         <div className="flex flex-col sm:flex-row gap-3">
           <a
-            href="https://wa.me/919500603579?text=Hi%20PraiseWave!%20I%20would%20like%20to%20claim%20my%20Free%2030-Minute%20Trial%20Class%20Pass."
+            href="https://wa.me/919361492530?text=Hi%20PraiseWave!%20I%20would%20like%20to%20claim%20my%20Free%2030-Minute%20Trial%20Class%20Pass."
             target="_blank"
             rel="noopener noreferrer"
             onClick={close}

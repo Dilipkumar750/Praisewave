@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { FaWhatsapp } from 'react-icons/fa6'
+import { FaWhatsapp, FaClock, FaCalendarDays, FaCalendarCheck } from 'react-icons/fa6'
 import { GiGrandPiano, GiMusicalScore } from 'react-icons/gi'
 import { HiArrowRight, HiSparkles } from 'react-icons/hi2'
 import { FiCheck } from 'react-icons/fi'
@@ -14,15 +14,17 @@ const keyboardPlans = [
     category: 'Keyboard',
     fee: '₹1,699',
     period: '/ Month',
+    classes: '8 Classes / Month',
+    duration: '45–50 Mins / Class',
     desc: 'Build a strong foundation in keyboard playing and basic music theory.',
     features: [
-      'Keyboard Basics',
-      'Octaves',
-      'Scales',
-      'Relative Chords',
-      'Basic Chord Knowledge',
-      'Playing Techniques',
-      'Live 1-on-1 Sessions',
+      '8 Live 1-on-1 Classes / Month',
+      '45–50 Mins Class Duration',
+      'Flexible Available Slots (Morning & Evening)',
+      'Keyboard Basics & Octaves',
+      'Scales & Relative Chords',
+      'Basic Chord Knowledge & Hand Posture',
+      '100% Live 1-on-1 Online Class',
     ],
     cta: 'Start Learning →',
     accent: 'from-purple-600 to-indigo-600',
@@ -35,20 +37,22 @@ const keyboardPlans = [
   {
     id: 'kb-2',
     number: '02',
-    title: 'Keyboard + Trinity Theory',
+    title: 'Keyboard + Music Theory',
     subtitle: 'Intermediate',
     category: 'Keyboard',
     fee: '₹2,499',
     period: '/ Month',
-    desc: 'Develop your keyboard skills alongside structured Trinity Music Theory up to Grade 3.',
+    classes: '8 Classes / Month',
+    duration: '45–50 Mins / Class',
+    desc: 'Develop your keyboard skills alongside structured Music Theory up to Grade 3.',
     features: [
-      'Staff & Notation',
-      'Note Values',
-      'Music Notation',
-      'Scales & Chords',
-      'Music Theory',
-      'Keyboard Playing',
-      'Live 1-on-1 Sessions',
+      '8 Live 1-on-1 Classes / Month',
+      '45–50 Mins Class Duration',
+      'Flexible Available Slots (Morning & Evening)',
+      'Staff, Clefs & Note Values',
+      'Music Notation & Key Signatures',
+      'Scales & Chord Progression Analysis',
+      '100% Live 1-on-1 Online Class',
     ],
     cta: 'Learn & Progress →',
     accent: 'from-cyan-600 to-blue-600',
@@ -66,15 +70,17 @@ const keyboardPlans = [
     category: 'Keyboard',
     fee: '₹2,999',
     period: '/ Month',
+    classes: '8 Classes / Month',
+    duration: '45–50 Mins / Class',
     desc: 'Take your keyboard playing to the next level with advanced chords, grooves, and practical playing techniques.',
     features: [
-      'All Advanced Chords',
-      'Backing Grooves',
-      'Chord Formats',
-      'Reharmonisation',
-      'Live Playing Techniques',
-      'Practical Chord Application',
-      'Live 1-on-1 Sessions',
+      '8 Live 1-on-1 Classes / Month',
+      '45–50 Mins Class Duration',
+      'Flexible Available Slots (Morning & Evening)',
+      'All Advanced Chords & Formats',
+      'Backing Grooves & Rhythm Locking',
+      'Reharmonisation & Live Worship Techniques',
+      '100% Live 1-on-1 Online Class',
     ],
     cta: 'Level Up Your Playing →',
     accent: 'from-fuchsia-600 to-pink-600',
@@ -91,48 +97,49 @@ const productionPlans = [
   {
     id: 'prod-1',
     emoji: '🎧',
-    title: 'Music Production',
+    title: 'Gospel Electronic Production',
     category: 'Production',
-    duration: '2-Month Course',
-    fee: '₹18,999',
-    desc: 'Learn the complete process of creating and producing music through practical, hands-on training.',
+    duration: 'Full Electronic Production + Mix & Mastering',
+    fee: '₹19,999',
+    classes: '8 Live Sessions / Month',
+    classDuration: '45–50 Mins / Session',
+    desc: 'Master full electronic Gospel music production — from beat programming and sound design to professional mixing and mastering ready for release.',
     features: [
-      'Music Production Basics',
-      'DAW & Production Workflow',
-      'Beat & Rhythm Programming',
-      'Arrangement & Instrumentation',
-      'Sound Selection & Design',
-      'Mixing Basics',
-      'Practical Project-Based Learning',
-      'Live 1-on-1 Sessions',
+      'Full Electronic Production Pipeline',
+      '8 Live 1-on-1 Sessions / Month (45–50 Mins)',
+      'Flexible Available Slots (Morning / Evening)',
+      'Gospel Beat & Rhythm Programming',
+      'Synth Layering & Sound Design',
+      'Choir & Vocal Arrangement',
+      'Professional Mix & Streaming Master',
+      'Live 1-on-1 Mentorship with Calix Joshua',
     ],
-    cta: 'Start Your Production Journey →',
+    cta: 'Enroll in Production →',
     accent: 'from-amber-500 to-orange-600',
     border: 'border-amber-500/30',
     glow: 'shadow-amber-900/30',
-    badge: 'Standalone',
+    badge: '₹19,999 Budget',
     badgeColor: 'bg-amber-500/15 text-amber-300 border-amber-500/25',
   },
   {
     id: 'prod-2',
     emoji: '🎹',
-    title: 'Keyboard + Music Production',
+    title: 'Keyboard + Gospel Production',
     category: 'Production',
-    duration: '4-Month Course',
+    duration: '4-Month Comprehensive Bundle',
     fee: '₹24,999',
-    desc: 'Build your keyboard skills from the basics to intermediate level while learning practical music production.',
+    classes: '8 Live Classes / Month',
+    classDuration: '45–50 Mins / Class',
+    desc: 'Build strong keyboard skills from basics to intermediate while mastering full electronic Gospel production, mixing, and mastering.',
     features: [
+      '8 Live 1-on-1 Classes / Month',
+      '45–50 Mins Class Duration',
+      'Flexible Available Slots (Weekdays & Weekends)',
       'Keyboard Basics to Intermediate',
-      'Scales, Chords & Chord Formats',
-      'Backing Grooves',
-      'Reharmonisation',
-      'Music Production Basics',
-      'DAW & Production Workflow',
-      'Beat & Rhythm Programming',
-      'Arrangement & Instrumentation',
-      'Mixing Basics',
-      'Practical Project-Based Learning',
-      'Live 1-on-1 Sessions',
+      'Scales, Chords & Reharmonisation',
+      'Full Electronic DAW Production',
+      'Beat Programming & Sound Design',
+      'Professional Mix & Mastering',
     ],
     cta: 'Learn. Play. Produce. →',
     accent: 'from-rose-500 to-red-600',
@@ -154,14 +161,17 @@ const theoryPlans = [
     level: 'Level: 0 → Grade 1',
     fee: '₹1,099',
     period: '/ Month',
+    classes: '8 Classes / Month',
+    duration: '45–50 Mins / Class',
     desc: 'Build your music theory foundation with structured lessons from the basics.',
     features: [
-      'Staff & Notation',
-      'Note Values',
-      'Scales',
-      'Key Signatures',
-      'Intervals',
-      'Basic Chord Concepts',
+      '8 Live 1-on-1 Classes / Month',
+      '45–50 Mins Class Duration',
+      'Flexible Available Slots',
+      'Staff, Clefs & Notation',
+      'Note Values & Time Signatures',
+      'Major Scales & Key Signatures',
+      'Intervals & Basic Triads',
     ],
     cta: 'Start Learning →',
     accent: 'from-emerald-600 to-teal-600',
@@ -178,13 +188,16 @@ const theoryPlans = [
     level: 'Level: Grade 2',
     fee: '₹1,299',
     period: '/ Month',
+    classes: '8 Classes / Month',
+    duration: '45–50 Mins / Class',
     desc: 'Develop your understanding of music theory with more advanced concepts and notation.',
     features: [
-      'Advanced Notation',
-      'Scales & Key Signatures',
-      'Intervals',
-      'Chords & Harmony',
-      'Rhythm & Time Signatures',
+      '8 Live 1-on-1 Classes / Month',
+      '45–50 Mins Class Duration',
+      'Flexible Available Slots',
+      'Advanced Notation & Clefs',
+      'Scales, Keys & Intervals',
+      'Chords, Inversions & Harmony',
       'Grade 2 Theory Concepts',
     ],
     cta: 'Continue Learning →',
@@ -202,13 +215,16 @@ const theoryPlans = [
     level: 'Level: Grade 3',
     fee: '₹1,499',
     period: '/ Month',
+    classes: '8 Classes / Month',
+    duration: '45–50 Mins / Class',
     desc: 'Take your theory knowledge further with advanced concepts in harmony, notation and musical structure.',
     features: [
-      'Advanced Notation',
-      'Harmony',
-      'Chords & Progressions',
-      'Scales & Key Signatures',
-      'Rhythm & Time Signatures',
+      '8 Live 1-on-1 Classes / Month',
+      '45–50 Mins Class Duration',
+      'Flexible Available Slots',
+      'Advanced Harmony & Voice Leading',
+      'Chords & Progressions Analysis',
+      'Compound Time & Transposition',
       'Grade 3 Theory Concepts',
     ],
     cta: 'Advance Your Theory →',
@@ -222,7 +238,7 @@ const theoryPlans = [
 
 /* ─── Enroll WhatsApp helper ─────────────────── */
 const waLink = (title) =>
-  `https://wa.me/919500603579?text=Hi%20PraiseWave!%20I%20want%20to%20enroll%20in%20${encodeURIComponent(title)}.%20Please%20share%20schedules%20and%20batch%20timings.`
+  `https://wa.me/919361492530?text=Hi%20PraiseWave!%20I%20want%20to%20enroll%20in%20${encodeURIComponent(title)}%20(8%20Classes/Month,%2045-50%20mins).%20Please%20share%20available%20slots.`
 
 /* ─── Reusable Feature List ──────────────────── */
 const FeatureList = ({ features }) => (
@@ -259,17 +275,33 @@ const KeyboardCard = ({ plan }) => (
         </span>
       </div>
       <h2 className="text-xl font-extrabold text-white mb-1 leading-tight">{plan.title}</h2>
-      <div className="flex items-baseline gap-1 mb-3">
+      
+      {/* Fee & Schedule Pill */}
+      <div className="flex items-baseline gap-1 mb-2">
         <span className="text-2xl font-black gradient-text-gold">{plan.fee}</span>
         <span className="text-xs text-slate-400 font-semibold">{plan.period}</span>
       </div>
+
+      <div className="flex items-center gap-2 mb-4">
+        <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-[11px] font-bold bg-purple-500/15 text-purple-300 border border-purple-500/25">
+          <FaCalendarDays className="w-3 h-3 text-purple-400" />
+          {plan.classes}
+        </span>
+        <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-[11px] font-bold bg-cyan-500/15 text-cyan-300 border border-cyan-500/25">
+          <FaClock className="w-3 h-3 text-cyan-400" />
+          {plan.duration}
+        </span>
+      </div>
+
       <p className="text-sm text-slate-400 leading-relaxed mb-5">{plan.desc}</p>
+      
       <div className="pt-4 border-t border-white/10 flex-1 mb-6">
         <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-3">
-          You'll Learn:
+          Course Structure &amp; Syllabus:
         </div>
         <FeatureList features={plan.features} />
       </div>
+
       <a
         href={waLink(plan.title)}
         target="_blank"
@@ -303,11 +335,25 @@ const ProductionCard = ({ plan }) => (
         </span>
       </div>
       <h2 className="text-xl font-extrabold text-white mb-1 leading-tight">{plan.title}</h2>
-      <div className="flex items-baseline gap-2 mb-1">
+      
+      <div className="flex items-baseline gap-2 mb-2">
         <span className="text-2xl font-black gradient-text-gold">{plan.fee}</span>
       </div>
+
+      <div className="flex flex-wrap items-center gap-2 mb-4">
+        <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-[11px] font-bold bg-amber-500/15 text-amber-300 border border-amber-500/25">
+          <FaCalendarDays className="w-3 h-3 text-amber-400" />
+          {plan.classes}
+        </span>
+        <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-[11px] font-bold bg-cyan-500/15 text-cyan-300 border border-cyan-500/25">
+          <FaClock className="w-3 h-3 text-cyan-400" />
+          {plan.classDuration || '45–50 Mins'}
+        </span>
+      </div>
+
       <div className="text-xs text-slate-400 font-semibold mb-3">{plan.duration}</div>
       <p className="text-sm text-slate-400 leading-relaxed mb-5">{plan.desc}</p>
+      
       <div className="pt-4 border-t border-white/10 flex-1 mb-6">
         <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-3">
           What You'll Learn:
@@ -342,12 +388,26 @@ const TheoryCard = ({ plan }) => (
         </span>
       </div>
       <h2 className="text-xl font-extrabold text-white mb-1 leading-tight">{plan.title}</h2>
-      <div className="flex items-baseline gap-1 mb-1">
+      
+      <div className="flex items-baseline gap-1 mb-2">
         <span className="text-2xl font-black gradient-text-gold">{plan.fee}</span>
         <span className="text-xs text-slate-400 font-semibold">{plan.period}</span>
       </div>
+
+      <div className="flex items-center gap-2 mb-4">
+        <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/25">
+          <FaCalendarDays className="w-3 h-3 text-emerald-400" />
+          {plan.classes}
+        </span>
+        <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-[11px] font-bold bg-cyan-500/15 text-cyan-300 border border-cyan-500/25">
+          <FaClock className="w-3 h-3 text-cyan-400" />
+          {plan.duration}
+        </span>
+      </div>
+
       <div className="text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-3">{plan.level}</div>
       <p className="text-sm text-slate-400 leading-relaxed mb-5">{plan.desc}</p>
+      
       <div className="pt-4 border-t border-white/10 flex-1 mb-6">
         <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-3">
           You'll Learn:
@@ -383,19 +443,61 @@ const Courses = () => {
   return (
     <div className="pt-28 pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       {/* ─── Page Header ──────────────────────── */}
-      <div className="text-center max-w-3xl mx-auto mb-14">
+      <div className="text-center max-w-3xl mx-auto mb-10">
         <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-purple-500/10 text-purple-300 border border-purple-500/20 mb-4">
           <HiSparkles className="w-3.5 h-3.5 text-cyan-400" />
-          Keyboard Courses &amp; Programs
+          Structured Music Programs
         </span>
         <h1 className="font-heading font-black text-4xl sm:text-5xl text-white tracking-tight mb-4">
           Courses Built for{' '}
           <span className="gradient-text-vibrant">Every Level</span>
         </h1>
         <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
-          From first-time beginners to advanced players — every course is taught live,
-          1-on-1, with a structured approach to real musical growth.
+          Every course is taught live, 1-on-1 with dedicated personal guidance — Monthly 8 classes, 45–50 mins each, with flexible available slots.
         </p>
+      </div>
+
+      {/* ─── Class Format & Available Slots Banner ─────────────────────── */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-14">
+        <div className="glass-card rounded-2xl p-4 border border-purple-500/20 flex items-center gap-3">
+          <div className="w-10 h-10 rounded-xl bg-purple-500/20 text-purple-300 flex items-center justify-center flex-shrink-0">
+            <FaCalendarDays className="w-5 h-5" />
+          </div>
+          <div>
+            <div className="text-xs font-bold text-white">Monthly 8 Classes</div>
+            <div className="text-[11px] text-slate-400">2 Live Sessions / Week</div>
+          </div>
+        </div>
+
+        <div className="glass-card rounded-2xl p-4 border border-cyan-500/20 flex items-center gap-3">
+          <div className="w-10 h-10 rounded-xl bg-cyan-500/20 text-cyan-300 flex items-center justify-center flex-shrink-0">
+            <FaClock className="w-5 h-5" />
+          </div>
+          <div>
+            <div className="text-xs font-bold text-white">45–50 Mins / Class</div>
+            <div className="text-[11px] text-slate-400">Personal 1-on-1 Focus</div>
+          </div>
+        </div>
+
+        <div className="glass-card rounded-2xl p-4 border border-amber-500/20 flex items-center gap-3">
+          <div className="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-300 flex items-center justify-center flex-shrink-0">
+            <FaCalendarCheck className="w-5 h-5" />
+          </div>
+          <div>
+            <div className="text-xs font-bold text-white">Available Slots</div>
+            <div className="text-[11px] text-slate-400">Morning, Evening &amp; Weekends</div>
+          </div>
+        </div>
+
+        <div className="glass-card rounded-2xl p-4 border border-emerald-500/20 flex items-center gap-3">
+          <div className="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-300 flex items-center justify-center flex-shrink-0">
+            <span className="text-lg">🌐</span>
+          </div>
+          <div>
+            <div className="text-xs font-bold text-white">100% Live Online</div>
+            <div className="text-[11px] text-slate-400">HD Video &amp; Direct Audio Line</div>
+          </div>
+        </div>
       </div>
 
       {/* ─── Tab Switcher with All Filter ─────────────────────── */}
@@ -431,6 +533,9 @@ const Courses = () => {
                 <h2 className="font-heading font-extrabold text-2xl sm:text-3xl text-white flex items-center gap-2 mt-1">
                   🎹 Keyboard &amp; Piano Courses
                 </h2>
+                <p className="text-xs text-slate-400 mt-1">
+                  Monthly 8 Classes · 45–50 Mins Per Session · Flexible Available Slots
+                </p>
               </div>
               <button
                 type="button"
@@ -458,6 +563,9 @@ const Courses = () => {
                 <h2 className="font-heading font-extrabold text-2xl sm:text-3xl text-white flex items-center gap-2 mt-1">
                   🎧 Music Production &amp; Audio
                 </h2>
+                <p className="text-xs text-slate-400 mt-1">
+                  Full Electronic Production + Mix &amp; Mastering · 1-on-1 Sessions · Flexible Timings
+                </p>
               </div>
               <button
                 type="button"
@@ -483,8 +591,11 @@ const Courses = () => {
                   Category · 03
                 </span>
                 <h2 className="font-heading font-extrabold text-2xl sm:text-3xl text-white flex items-center gap-2 mt-1">
-                  🎼 Music Theory &amp; Trinity Grades
+                  🎼 Music Theory Grades
                 </h2>
+                <p className="text-xs text-slate-400 mt-1">
+                  Monthly 8 Classes · 45–50 Mins Per Session · Grade 1 to Grade 3
+                </p>
               </div>
               <button
                 type="button"
@@ -531,22 +642,25 @@ const Courses = () => {
         </div>
       )}
 
-      {/* ─── Bottom Guidance Banner ────────────── */}
+      {/* ─── Available Slots & Schedules Consultation Card ────────────── */}
       <div className="rounded-3xl p-8 sm:p-12 border border-white/15 bg-gradient-to-r from-purple-900/40 via-slate-900/80 to-cyan-900/40 backdrop-blur-xl text-center">
+        <span className="text-[10px] font-bold uppercase tracking-widest text-amber-300 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20 mb-3 inline-block">
+          Flexible Available Slots
+        </span>
         <h2 className="font-heading font-bold text-2xl sm:text-3xl text-white mb-3">
-          Not Sure Which Course Is Right for You?
+          Check Current Available Batch Timings
         </h2>
         <p className="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto mb-6">
-          Chat with us on WhatsApp and we'll guide you to the perfect course based on your current level and goals.
+          We offer flexible morning, evening, and weekend slots with <strong>8 classes / month (45–50 mins each)</strong>. Chat with us on WhatsApp to select the slot that fits your routine.
         </p>
         <a
-          href="https://wa.me/919500603579?text=Hi%20PraiseWave!%20I%20need%20guidance%20on%20choosing%20the%20right%20course."
+          href="https://wa.me/919361492530?text=Hi%20PraiseWave!%20I%20would%20like%20to%20know%20the%20available%20slots%20for%208%20classes/month%20(45-50%20mins)."
           target="_blank"
           rel="noopener noreferrer"
           className="btn-whatsapp text-xs sm:text-sm py-3.5 px-7 inline-flex items-center gap-2.5 group"
         >
           <FaWhatsapp className="w-4 h-4" />
-          <span>Get Free Guidance on WhatsApp</span>
+          <span>Check Available Slots on WhatsApp</span>
           <HiArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
         </a>
       </div>

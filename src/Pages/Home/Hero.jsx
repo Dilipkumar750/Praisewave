@@ -1,57 +1,41 @@
 import { useState, useEffect } from 'react'
-import { pianoImg, guitarImg, vocalImg, violinImg, drumsImg } from '../../assets/images'
-import { FaWhatsapp, FaGuitar, FaMicrophone } from 'react-icons/fa6'
-import { GiGrandPiano, GiViolin, GiDrumKit } from 'react-icons/gi'
+import { pianoImg, theoryImg, calix } from '../../assets/images'
+import { FaWhatsapp } from 'react-icons/fa6'
+import { GiGrandPiano, GiPianoKeys, GiMusicalScore } from 'react-icons/gi'
 import { HiArrowRight, HiSparkles } from 'react-icons/hi2'
 import { FiCheck, FiArrowRight } from 'react-icons/fi'
 
 const featuredInstruments = [
   {
-    name: 'Piano & Keyboard',
-    tagline: 'Classical to Pop Mastery',
-    grade: 'ABRSM & Trinity Prep',
+    name: 'Piano & Keyboard Basics',
+    tagline: 'Notes, Chords & Hand Technique',
+    grade: 'Beginner Friendly',
     color: 'from-purple-500 to-indigo-600',
     image: pianoImg,
-    icon: <GiGrandPiano className="w-6 h-6" />,
+    icon: <GiPianoKeys className="w-6 h-6" />,
   },
   {
-    name: 'Acoustic & Electric Guitar',
-    tagline: 'Chords, Solos & Fingerstyle',
-    grade: 'RockSchool Certified',
-    color: 'from-amber-500 to-rose-600',
-    image: guitarImg,
-    icon: <FaGuitar className="w-6 h-6" />,
-  },
-  {
-    name: 'Western & Carnatic Vocals',
-    tagline: 'Breath Control & Pitch Perfection',
-    grade: 'All Ages & Levels',
-    color: 'from-pink-500 to-fuchsia-600',
-    image: vocalImg,
-    icon: <FaMicrophone className="w-6 h-6" />,
-  },
-  {
-    name: 'Violin & Strings',
-    tagline: 'Expressive Bowing & Tone',
-    grade: 'Classical Repertoire',
+    name: 'Keyboard + Music Theory',
+    tagline: 'Scales, Harmony & Music Reading',
+    grade: 'Intermediate Level',
     color: 'from-cyan-500 to-blue-600',
-    image: violinImg,
-    icon: <GiViolin className="w-6 h-6" />,
+    image: theoryImg,
+    icon: <GiMusicalScore className="w-6 h-6" />,
   },
   {
-    name: 'Drums & Modern Percussion',
-    tagline: 'Groove, Tempo & Limb Independence',
-    grade: 'Trinity Rock & Pop',
-    color: 'from-emerald-500 to-teal-600',
-    image: drumsImg,
-    icon: <GiDrumKit className="w-6 h-6" />,
+    name: 'Church & Worship Keyboard',
+    tagline: 'Live Worship & Ministry Playing',
+    grade: 'Gospel & Ministry Focus',
+    color: 'from-amber-500 to-rose-600',
+    image: calix,
+    icon: <GiGrandPiano className="w-6 h-6" />,
   },
 ]
 
 const stats = [
   { value: '500+', label: 'Active Students', sub: 'Kids to Adults' },
-  { value: '98%', label: 'Exam Success', sub: 'Trinity & ABRSM' },
-  { value: '15+', label: 'Master Mentors', sub: '10+ Yrs Experience' },
+  { value: '100%', label: 'Structured Learning', sub: 'Step-by-Step' },
+  { value: '10+', label: 'Years Experience', sub: 'Calix Joshua' },
   { value: '4.9★', label: 'Student Rating', sub: 'Over 300+ Reviews' },
 ]
 
@@ -86,11 +70,11 @@ const Hero = () => {
           <div className="lg:col-span-7 flex flex-col items-start text-left">
 
             {/* Season & Pricing Badge */}
-            <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full glass-pill border border-orange-400/25 mb-6 text-xs font-semibold">
+            <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full glass-pill border border-orange-400/25 mb-6 text-xs font-semibold animate-badge-pulse">
               <span className="flex h-2 w-2 rounded-full bg-orange-400 animate-ping" />
               <HiSparkles className="w-3.5 h-3.5 text-orange-300" />
-              <span className="text-orange-300 font-bold">Start Your Musical Journey at Just ₹1,699</span>
-              <span className="text-slate-400">· Structured Keyboard Training</span>
+              <span className="text-orange-300 font-bold">Monthly 8 Classes (45–50 Mins) at Just ₹1,699</span>
+              <span className="text-slate-400">· Flexible Available Slots</span>
             </div>
 
             {/* User H1 */}
@@ -120,7 +104,7 @@ const Hero = () => {
               </a>
 
               <a
-                href="https://wa.me/919500603579?text=Hi%20PraiseWave!%20I%20want%20to%20begin%20my%20keyboard%20journey."
+                href="https://wa.me/919361492530?text=Hi%20PraiseWave!%20I%20want%20to%20begin%20my%20keyboard%20journey."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-secondary flex items-center justify-center gap-2.5 text-sm py-3.5 px-6 group"
@@ -137,13 +121,13 @@ const Hero = () => {
                 <div className="w-4 h-4 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-[10px]">
                   <FiCheck className="w-3 h-3" />
                 </div>
-                <span>Trinity & ABRSM Syllabus</span>
+                <span>Structured Keyboard Syllabus</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-4 h-4 rounded-full bg-cyan-500/20 text-cyan-400 flex items-center justify-center font-bold text-[10px]">
                   <FiCheck className="w-3 h-3" />
                 </div>
-                <span>Studio & Online Classes</span>
+                <span>100% Live Online Classes</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-4 h-4 rounded-full bg-purple-500/20 text-purple-400 flex items-center justify-center font-bold text-[10px]">
@@ -238,9 +222,9 @@ const Hero = () => {
               <div className="grid grid-cols-2 gap-3 mt-4">
                 <div className="glass-card rounded-xl p-3.5 border border-white/10">
                   <div className="text-xs text-slate-400 font-medium">Certification</div>
-                  <div className="text-sm font-bold text-white mt-0.5">Trinity / ABRSM</div>
+                  <div className="text-sm font-bold text-white mt-0.5">Keyboard Focused</div>
                   <div className="text-[10px] text-emerald-400 flex items-center gap-1 mt-1">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 inline-block" /> 100% Exam Pass
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 inline-block" /> Structured Syllabus
                   </div>
                 </div>
                 <div className="glass-card rounded-xl p-3.5 border border-white/10">
@@ -251,13 +235,13 @@ const Hero = () => {
               </div>
 
               {/* Floating Testimonial Pill */}
-              <div className="mt-4 glass-card rounded-2xl p-3.5 flex items-center gap-3 border border-white/10">
+              <div className="mt-4 glass-card rounded-2xl p-3.5 flex items-center gap-3 border border-white/10 animate-float-slow">
                 <div className="w-9 h-9 rounded-full bg-gradient-to-tr from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold text-xs flex-shrink-0">
                   AR
                 </div>
                 <div className="min-w-0">
                   <div className="text-xs font-semibold text-white truncate">"Passed Grade 8 with Distinction!"</div>
-                  <div className="text-[10px] text-slate-400 truncate">Arjun R. · Trinity College London Alum</div>
+                  <div className="text-[10px] text-slate-400 truncate">Praisewave Student · Keyboard Graduate</div>
                 </div>
                 <div className="ml-auto flex text-amber-400 text-xs flex-shrink-0">
                   ★★★★★

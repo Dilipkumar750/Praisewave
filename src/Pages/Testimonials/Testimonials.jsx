@@ -242,7 +242,7 @@ const Testimonials = () => {
           </div>
 
           <a
-            href="https://wa.me/919500603579?text=Hi%20PraiseWave!%20I%20would%20like%20to%20share%20my%20feedback%20and%20review."
+            href="https://wa.me/919361492530?text=Hi%20PraiseWave!%20I%20would%20like%20to%20share%20my%20feedback%20and%20review."
             target="_blank"
             rel="noopener noreferrer"
             className="btn-whatsapp text-xs sm:text-sm !py-3.5 px-6 flex items-center justify-center gap-2 group"
@@ -271,7 +271,7 @@ const Testimonials = () => {
             <HiArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
           </Link>
           <a
-            href="https://wa.me/919500603579?text=Hi%20PraiseWave!%20I%20would%20like%20to%20book%20a%20free%20trial%20class."
+            href="https://wa.me/919361492530?text=Hi%20PraiseWave!%20I%20would%20like%20to%20book%20a%20free%20trial%20class."
             target="_blank"
             rel="noopener noreferrer"
             className="btn-whatsapp text-xs sm:text-sm py-3.5 px-7 inline-flex items-center gap-2.5 group"
