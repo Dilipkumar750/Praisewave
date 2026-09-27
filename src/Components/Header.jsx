@@ -2,8 +2,7 @@ import { useState, useEffect } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { logoImg } from '../assets/images'
 import { FiPhone, FiMenu, FiX } from 'react-icons/fi'
-import { FaWhatsapp } from 'react-icons/fa6'
-import { HiSparkles, HiArrowRight } from 'react-icons/hi2'
+import { FaWhatsapp, FaInstagram, FaFacebookF, FaYoutube } from 'react-icons/fa6'
 
 const navLinks = [
   { label: 'Home', path: '/' },
@@ -12,6 +11,33 @@ const navLinks = [
   { label: 'Testimonials', path: '/testimonials' },
   { label: 'Articles & Tips', path: '/blogs' },
   { label: 'Contact', path: '/contact' },
+]
+
+const socialLinks = [
+  {
+    name: 'Instagram',
+    icon: FaInstagram,
+    url: 'https://www.instagram.com/praisewavemusic',
+    color: 'hover:text-[#E1306C] hover:bg-[#E1306C]/15 hover:border-[#E1306C]/40',
+  },
+  {
+    name: 'WhatsApp',
+    icon: FaWhatsapp,
+    url: 'https://wa.me/919361492530?text=Hi%20PraiseWave!%20I%20have%20an%20inquiry.',
+    color: 'hover:text-[#25D366] hover:bg-[#25D366]/15 hover:border-[#25D366]/40',
+  },
+  {
+    name: 'Facebook',
+    icon: FaFacebookF,
+    url: 'https://www.facebook.com/praisewavemusic',
+    color: 'hover:text-[#1877F2] hover:bg-[#1877F2]/15 hover:border-[#1877F2]/40',
+  },
+  {
+    name: 'YouTube',
+    icon: FaYoutube,
+    url: 'https://www.youtube.com/@praisewavemusic',
+    color: 'hover:text-[#FF0000] hover:bg-[#FF0000]/15 hover:border-[#FF0000]/40',
+  },
 ]
 
 const Header = () => {
@@ -88,16 +114,25 @@ const Header = () => {
             <span>+91 93614 92530</span>
           </a>
 
-          <a
-            href="https://wa.me/919361492530?text=Hi%20PraiseWave!%20I%20would%20like%20to%20book%20a%20free%20trial%20class."
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-primary !text-xs !py-2.5 !px-5 shadow-lg shadow-purple-900/30 flex items-center gap-2 group"
-          >
-            <HiSparkles className="w-3.5 h-3.5 text-amber-300" />
-            <span>Book Free Trial</span>
-            <HiArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-1" />
-          </a>
+          {/* Social Media Icons */}
+          <div className="flex items-center gap-1.5 glass-pill p-1 rounded-full border border-white/10">
+            {socialLinks.map((social) => {
+              const Icon = social.icon
+              return (
+                <a
+                  key={social.name}
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={social.name}
+                  title={social.name}
+                  className={`w-8 h-8 rounded-full flex items-center justify-center text-slate-300 border border-transparent transition-all duration-200 hover:scale-110 ${social.color}`}
+                >
+                  <Icon className="w-4 h-4" />
+                </a>
+              )
+            })}
+          </div>
         </div>
 
         {/* ─── Mobile Right Actions ───────────────────── */}
@@ -151,16 +186,26 @@ const Header = () => {
             </NavLink>
           ))}
 
-          <div className="pt-3 border-t border-white/10 flex flex-col gap-2 mt-1">
-            <a
-              href="https://wa.me/919361492530?text=Hi%20PraiseWave!%20I%20want%20to%20book%20a%20free%20trial%20class."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary !text-xs !py-3 px-4 rounded-xl flex items-center justify-center gap-2"
-            >
-              <HiSparkles className="w-4 h-4 text-amber-300" />
-              <span>Book Free Trial on WhatsApp</span>
-            </a>
+          <div className="pt-3 border-t border-white/10 flex flex-col gap-2.5 mt-1">
+            {/* Social Media Links in Mobile Drawer */}
+            <div className="flex items-center justify-around py-2 px-3 glass-pill rounded-2xl border border-white/10">
+              {socialLinks.map((social) => {
+                const Icon = social.icon
+                return (
+                  <a
+                    key={social.name}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={social.name}
+                    title={social.name}
+                    className={`w-9 h-9 rounded-full flex items-center justify-center text-slate-300 border border-transparent transition-all duration-200 hover:scale-110 ${social.color}`}
+                  >
+                    <Icon className="w-4.5 h-4.5" />
+                  </a>
+                )
+              })}
+            </div>
 
             <a
               href="tel:+919361492530"

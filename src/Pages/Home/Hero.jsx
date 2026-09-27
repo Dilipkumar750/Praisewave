@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { pianoImg, theoryImg, calix } from '../../assets/images'
+import { pianoImg, theoryImg, hero1, hero2, hero3 } from '../../assets/images'
 import { FaWhatsapp } from 'react-icons/fa6'
 import { GiGrandPiano, GiPianoKeys, GiMusicalScore } from 'react-icons/gi'
 import { HiArrowRight, HiSparkles } from 'react-icons/hi2'
@@ -11,7 +11,7 @@ const featuredInstruments = [
     tagline: 'Notes, Chords & Hand Technique',
     grade: 'Beginner Friendly',
     color: 'from-purple-500 to-indigo-600',
-    image: pianoImg,
+    image: hero1,
     icon: <GiPianoKeys className="w-6 h-6" />,
   },
   {
@@ -19,7 +19,7 @@ const featuredInstruments = [
     tagline: 'Scales, Harmony & Music Reading',
     grade: 'Intermediate Level',
     color: 'from-cyan-500 to-blue-600',
-    image: theoryImg,
+    image: hero2,
     icon: <GiMusicalScore className="w-6 h-6" />,
   },
   {
@@ -27,7 +27,7 @@ const featuredInstruments = [
     tagline: 'Live Worship & Ministry Playing',
     grade: 'Gospel & Ministry Focus',
     color: 'from-amber-500 to-rose-600',
-    image: calix,
+    image: hero3,
     icon: <GiGrandPiano className="w-6 h-6" />,
   },
 ]
@@ -73,7 +73,7 @@ const Hero = () => {
             <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full glass-pill border border-orange-400/25 mb-6 text-xs font-semibold animate-badge-pulse">
               <span className="flex h-2 w-2 rounded-full bg-orange-400 animate-ping" />
               <HiSparkles className="w-3.5 h-3.5 text-orange-300" />
-              <span className="text-orange-300 font-bold">Monthly 8 Classes (45–50 Mins) at Just ₹1,699</span>
+              <span className="text-orange-300 font-bold">Monthly 8 Classes (45–50 Mins) at Just ₹1,099</span>
               <span className="text-slate-400">· Flexible Available Slots</span>
             </div>
 
@@ -99,7 +99,7 @@ const Hero = () => {
                 className="btn-primary flex items-center justify-center gap-3 text-sm py-3.5 px-7 shadow-xl shadow-purple-900/30 group"
               >
                 <span>Begin Your Journey</span>
-                <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-white/20">₹1,699</span>
+                <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-white/20">₹1,099</span>
                 <HiArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </a>
 

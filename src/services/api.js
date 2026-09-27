@@ -1,6 +1,7 @@
 import { blogArticles as fallbackBlogs } from '../Pages/Blogs/blogData'
 
-const API_BASE_URL = 'http://localhost:5000/api'
+const API_BASE_URL =
+  import.meta.env.VITE_API_URL || 'https://praisewave-backend.vercel.app'
 
 // Auth token storage keys
 const TOKEN_KEY = 'adminToken'
@@ -76,7 +77,10 @@ export const apiGetBlogs = async (tag = 'All', search = '') => {
     if (search) params.append('search', search)
 
     const res = await fetch(`${API_BASE_URL}/blogs?${params.toString()}`)
-    if (!res.ok) throw new Error('Failed to fetch blogs')
+    const contentType = res.headers.get('content-type') || ''
+    if (!res.ok || !contentType.includes('application/json')) {
+      throw new Error('API did not return valid JSON')
+    }
     const data = await res.json()
     return data && data.length > 0 ? data : fallbackBlogs
   } catch (error) {
@@ -91,7 +95,10 @@ export const apiGetBlogs = async (tag = 'All', search = '') => {
 export const apiGetBlogById = async (id) => {
   try {
     const res = await fetch(`${API_BASE_URL}/blogs/${id}`)
-    if (!res.ok) throw new Error('Failed to fetch blog')
+    const contentType = res.headers.get('content-type') || ''
+    if (!res.ok || !contentType.includes('application/json')) {
+      throw new Error('API did not return valid JSON')
+    }
     const data = await res.json()
     return data
   } catch (error) {

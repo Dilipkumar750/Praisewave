@@ -12,6 +12,9 @@ import gospelMinistryImg from './gospel_worship_ministry.jpg'
 import gospelGrowthImg from './gospel_structured_growth.jpg'
 import logoImg from '../logo.jpeg'
 import calix from "../../assets/calix.jpeg"
+import hero1 from "../images/hero1.jpg"
+import hero2 from "../images/hero2.jpg"
+import hero3 from "../images/hero3.jpg"
 export {
   pianoImg,
   guitarImg,
@@ -26,6 +29,9 @@ export {
   gospelMinistryImg,
   gospelGrowthImg,
   logoImg,
+  hero1,
+  hero2,
+  hero3,
   calix
 }
 

@@ -125,7 +125,7 @@ const Home = () => {
                 rel="noopener noreferrer"
                 className="btn-primary !text-sm !py-3.5 !px-7 shadow-lg shadow-purple-900/40 flex items-center gap-2.5 group"
               >
-                <span>Start Your Musical Journey at Just ₹1,699</span>
+                <span>Start Your Musical Journey at Just ₹1,099</span>
                 <HiArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </a>
 
@@ -211,7 +211,7 @@ const Home = () => {
             rel="noopener noreferrer"
             className="btn-primary !text-sm !py-3.5 !px-8 shadow-xl inline-flex items-center gap-2.5 group"
           >
-            <span>Begin Your Journey at Just ₹1,699</span>
+            <span>Begin Your Journey at Just ₹1,099</span>
             <HiArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
           </a>
         </div>
