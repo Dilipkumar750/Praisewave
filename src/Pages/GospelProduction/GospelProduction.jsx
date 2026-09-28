@@ -11,26 +11,26 @@ import {
 } from '../../assets/images'
 
 const waLink = (title) =>
-  `https://wa.me/919361492530?text=Hi%20PraiseWave!%20I%20want%20to%20enroll%20in%20${encodeURIComponent(title)}.%20Please%20share%20details.`
+  `https://wa.me/919361492530?text=Hi%20PraiseWave!%20I%20want%20to%20book%20the%20${encodeURIComponent(title)}%20service.%20Please%20share%20details.`
 
-/* ─── Lightweight Course Modules ────────────────────────── */
+/* ─── Production Service Breakdown ────────────────────────── */
 const modules = [
   {
-    title: 'Beat Making & Rhythm',
-    desc: 'Gospel drum programming, 808s, groove design, and MIDI sequencing.',
+    title: 'Beat & Rhythm Production',
+    desc: 'Gospel drum programming, 808s, groove design, and custom MIDI sequencing for your track.',
     items: [
-      'DAW Setup & Studio Workflow',
+      'DAW Setup & Project Workflow',
       'Gospel Beat & Loop Programming',
-      'Groove Design & MIDI Timing',
+      'Groove Design & Custom MIDI Timing',
     ],
     icon: '🥁',
     color: 'from-purple-600 to-indigo-600',
   },
   {
     title: 'Sound Design & Arrangement',
-    desc: 'Worship pads, piano layers, vocal structures, and dynamic builds.',
+    desc: 'Worship pads, piano layers, synth textures, and dynamic gospel song builds.',
     items: [
-      'Gospel Song Architecture',
+      'Gospel Song Architecture & Structure',
       'Synth, Pad & Piano Layering',
       'Choir & Vocal Arrangement',
     ],
@@ -39,7 +39,7 @@ const modules = [
   },
   {
     title: 'Mixing & Mastering',
-    desc: 'Surgical EQ, compression, spatial depth, and release-ready mastering.',
+    desc: 'Surgical EQ, compression, spatial depth, and streaming-ready mastering.',
     items: [
       'Pro Mixing (EQ, Dynamics & FX)',
       'Stereo Width & Spatial Reverb',
@@ -50,14 +50,14 @@ const modules = [
   },
 ]
 
-/* ─── Streamlined Why Cards ────────────────────────── */
+/* ─── Production Highlights ────────────────────────── */
 const highlights = [
   {
     id: 1,
     image: gospelWorshipImg,
     icon: '🎧',
-    title: 'Complete Electronic Production',
-    desc: 'Build full Gospel tracks from initial beat to final master ready for release.',
+    title: 'Complete Song Production',
+    desc: 'Full Gospel backing tracks built from initial beat to final master ready for digital release.',
     accent: '#c084fc',
     border: 'border-purple-500/25',
   },
@@ -66,7 +66,7 @@ const highlights = [
     image: gospelKeysDawImg,
     icon: '🎛️',
     title: 'Sound Design & Layering',
-    desc: 'Design rich worship pads, lead synths, acoustic piano layers, and atmospheric textures.',
+    desc: 'Rich worship pads, lead synths, acoustic piano layers, and atmospheric textures crafted for your song.',
     accent: '#fbbf24',
     border: 'border-amber-500/25',
   },
@@ -74,8 +74,8 @@ const highlights = [
     id: 3,
     image: gospelMentorshipImg,
     icon: '📡',
-    title: '1-on-1 Mentorship',
-    desc: 'Personal screen-share coaching and direct feedback with Calix Joshua.',
+    title: 'Producer Collaboration',
+    desc: 'Personal song consultation and arrangement feedback directly with producer Calix Joshua.',
     accent: '#67e8f9',
     border: 'border-cyan-500/25',
   },
@@ -92,8 +92,8 @@ const highlights = [
     id: 5,
     image: gospelMinistryImg,
     icon: '🎶',
-    title: 'Gospel & Ministry Style',
-    desc: 'Authentic worship chord progressions, choir stacking, and praise energy.',
+    title: 'Gospel & Worship Style',
+    desc: 'Authentic worship chord progressions, choir stacking, and praise energy tailored to your song.',
     accent: '#fb7185',
     border: 'border-rose-500/25',
   },
@@ -101,8 +101,8 @@ const highlights = [
     id: 6,
     image: gospelGrowthImg,
     icon: '🏆',
-    title: 'Release-Ready Skills',
-    desc: 'Graduate with full multitrack stems, WAV masters, and independent producer confidence.',
+    title: 'Commercial Release Deliverables',
+    desc: 'Receive complete multitrack stems, high-resolution WAV masters, and full commercial usage rights.',
     accent: '#34d399',
     border: 'border-emerald-500/25',
   },
@@ -115,17 +115,17 @@ const packages = [
     title: 'Complete Gospel Music Production',
     price: '₹19,999',
     sub: 'per song',
-    note: 'No live instruments included. 100% electronic / in-the-box production.',
+    note: 'No live instruments included. 100% electronic / in-the-box song production.',
     accent: '#f97316',
     border: 'border-amber-500/30',
     glow: 'rgba(249,115,22,0.12)',
     features: [
-      'Gospel arrangement & production',
+      'Gospel arrangement & full production',
       'Electronic instrumentation & programming',
       'Drums, bass, keys & synths',
       'Vocal editing & processing',
       'Complete mixing & mastering',
-      'Final WAV + MP3 delivery',
+      'Final WAV + MP3 + Multitrack stems delivery',
     ],
     waText: 'Complete Gospel Music Production — Electronic (₹19,999 per song)',
   },
@@ -135,18 +135,18 @@ const packages = [
     title: 'Full Gospel Music Production',
     price: '₹29,999',
     sub: 'per song',
-    note: 'Studio & recording charges excluded.',
+    note: 'Includes live guitars & advanced vocal tuning. Studio recording charges extra.',
     accent: '#7c3aed',
     border: 'border-purple-500/30',
     glow: 'rgba(124,58,237,0.14)',
     features: [
       'Complete Gospel music production',
       'Electronic & rhythm programming',
-      'Live electric guitar',
-      'Acoustic guitar',
+      'Live electric guitar recording',
+      'Acoustic guitar recording',
       'Vocal tuning & editing with Melodyne',
       'Complete mixing & mastering',
-      'Final WAV + MP3 delivery',
+      'Final WAV + MP3 + Multitrack stems delivery',
     ],
     waText: 'Full Gospel Music Production with Live Instruments (₹29,999 per song)',
   },
@@ -174,31 +174,31 @@ const GospelProduction = () => {
               <div className="inline-flex items-center gap-2 self-start px-3.5 py-1.5 rounded-full mb-4 text-[11px] font-bold uppercase tracking-wider border"
                 style={{ background: 'rgba(124,58,237,0.12)', borderColor: 'rgba(124,58,237,0.30)', color: '#c4b5fd' }}>
                 <FaChurch className="w-3 h-3 text-amber-400" />
-                <span>Gospel Production · ₹19,999 – ₹29,999</span>
+                <span>Gospel Production Service · ₹19,999 – ₹29,999 / Song</span>
               </div>
 
               <h1 className="font-heading font-black leading-[1.15] mb-4 tracking-tight"
                 style={{ fontSize: 'clamp(1.85rem, 3.2vw, 2.75rem)' }}>
-                <span className="text-white block">Full Electronic Production</span>
+                <span className="text-white block">Full Electronic Gospel Production</span>
                 <span className="gradient-text-vibrant block">
-                  With Mix &amp; Mastering
+                  With Pro Mix &amp; Mastering
                 </span>
               </h1>
 
               <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-6 max-w-lg">
-                Master complete Gospel electronic music production, sound design, and professional mixing &amp; mastering. Live 1-on-1 coaching with Calix Joshua.
+                Bring your Gospel songs to life with professional music production, custom sound design, beat programming, and industry-standard mixing &amp; mastering by producer Calix Joshua.
               </p>
 
               {/* CTAs */}
               <div className="flex flex-col sm:flex-row gap-3 mb-6">
                 <a
-                  href={waLink('Gospel Electronic Production with Mix & Mastering (₹19,999)')}
+                  href={waLink('Gospel Music Production Service (₹19,999/song)')}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-primary !text-xs !py-3.5 !px-6 flex items-center justify-center gap-2.5 shadow-lg group"
                 >
                   <FaWhatsapp className="w-4 h-4 text-emerald-300" />
-                  <span>Enroll for ₹19,999 on WhatsApp</span>
+                  <span>Book Production Service on WhatsApp</span>
                   <HiArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
                 </a>
 
@@ -213,10 +213,10 @@ const GospelProduction = () => {
               {/* Feature pills */}
               <div className="flex flex-wrap gap-2">
                 {[
-                  { label: 'Electronic Production', color: '#7c3aed' },
-                  { label: 'Mix & Mastering', color: '#f97316' },
-                  { label: '₹19,999 Budget', color: '#fbbf24' },
-                  { label: '1-on-1 Mentorship', color: '#06b6d4' },
+                  { label: 'Per-Song Service', color: '#7c3aed' },
+                  { label: 'Mix & Mastering Included', color: '#f97316' },
+                  { label: '₹19,999 Starting Price', color: '#fbbf24' },
+                  { label: 'Full Multitrack Stems', color: '#06b6d4' },
                 ].map(tag => (
                   <span key={tag.label}
                     className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-[11px] font-semibold"
@@ -237,10 +237,10 @@ const GospelProduction = () => {
                     <div className="w-2.5 h-2.5 rounded-full bg-rose-500/80" />
                     <div className="w-2.5 h-2.5 rounded-full bg-amber-500/80" />
                     <div className="w-2.5 h-2.5 rounded-full bg-emerald-500/80" />
-                    <span className="text-[11px] font-mono text-slate-400 pl-1">PRAISE DAW — Gospel Project</span>
+                    <span className="text-[11px] font-mono text-slate-400 pl-1">PRAISE DAW — Song Production</span>
                   </div>
                   <span className="text-[10px] font-mono text-amber-400 font-bold bg-amber-500/10 px-2 py-0.5 rounded border border-amber-500/20">
-                    LIVE SESSION
+                    PRODUCTION STUDIO
                   </span>
                 </div>
 
@@ -288,9 +288,9 @@ const GospelProduction = () => {
 
                 {/* Bottom stats */}
                 <div className="grid grid-cols-3 gap-2 text-center text-[10px] text-slate-400 pt-2 border-t border-white/5">
-                  <div><strong>Mode:</strong> 1-on-1</div>
-                  <div><strong>Format:</strong> 100% Live Online</div>
-                  <div className="text-amber-300 font-bold">₹19,999 Budget</div>
+                  <div><strong>Delivery:</strong> WAV + Stems</div>
+                  <div><strong>Format:</strong> Commercial Master</div>
+                  <div className="text-amber-300 font-bold">₹19,999 / Song</div>
                 </div>
               </div>
             </div>
@@ -299,15 +299,15 @@ const GospelProduction = () => {
         </div>
       </section>
 
-      {/* ─── 3 Modules Curriculum ───────────────────── */}
+      {/* ─── Service Breakdown Section ───────────────────── */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-purple-500/10 text-purple-300 border border-purple-500/20 mb-3">
             <HiSparkles className="w-3.5 h-3.5 text-cyan-400" />
-            Curriculum Breakdown
+            Production Workflow
           </span>
           <h2 className="font-heading font-black text-2xl sm:text-3xl text-white tracking-tight">
-            What You'll <span className="gradient-text-vibrant">Learn</span>
+            What's Included in the <span className="gradient-text-vibrant">Service</span>
           </h2>
         </div>
 
@@ -323,7 +323,7 @@ const GospelProduction = () => {
                     {mod.icon}
                   </div>
                   <span className="text-[10px] font-mono text-slate-500 font-bold uppercase">
-                    Step 0{idx + 1}
+                    Phase 0{idx + 1}
                   </span>
                 </div>
 
@@ -344,15 +344,15 @@ const GospelProduction = () => {
         </div>
       </section>
 
-      {/* ─── Highlights Grid (Crisp 6 Cards) ───────────────────── */}
+      {/* ─── Highlights Grid (6 Cards) ───────────────────── */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500/10 text-amber-300 border border-amber-500/20 mb-3">
             <HiSparkles className="w-3.5 h-3.5 text-amber-400" />
-            Core Benefits
+            Service Benefits
           </span>
           <h2 className="font-heading font-black text-2xl sm:text-3xl text-white tracking-tight">
-            Why Learn <span className="gradient-text-gold">Gospel Production</span> with Us
+            Why Produce Your Music with <span className="gradient-text-gold">PraiseWave</span>
           </h2>
         </div>
 
@@ -394,7 +394,7 @@ const GospelProduction = () => {
             Choose Your <span className="gradient-text-gold">Production Package</span>
           </h2>
           <p className="text-slate-400 text-sm mt-3">
-            From full electronic to live-instrument production — professionally mixed &amp; mastered.
+            From full electronic to live-instrument production — professionally mixed &amp; mastered per song.
           </p>
         </div>
 
@@ -440,7 +440,7 @@ const GospelProduction = () => {
                 style={{ background: `linear-gradient(135deg, ${pkg.accent}, ${pkg.id === 'full' ? '#db2777' : '#db2777'})`, boxShadow: `0 8px 24px ${pkg.accent}30` }}
               >
                 <FaWhatsapp className="w-4 h-4 text-emerald-300" />
-                <span>Enroll on WhatsApp</span>
+                <span>Book Service on WhatsApp</span>
                 <HiArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
               </a>
             </div>
@@ -448,23 +448,23 @@ const GospelProduction = () => {
         </div>
       </section>
 
-      {/* ─── Testimonial ───────────────────────────── */}
+      {/* ─── Client Review ───────────────────────────── */}
       <section className="py-12 px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto">
         <div className="glass-card rounded-3xl p-8 border border-purple-500/20 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-48 h-48 rounded-full pointer-events-none"
             style={{ background: 'rgba(124,58,237,0.08)', filter: 'blur(60px)' }} />
           <div className="text-4xl text-purple-400/40 font-serif leading-none mb-4">&ldquo;</div>
           <p className="text-slate-200 text-sm sm:text-base leading-relaxed italic mb-6">
-            My daughter Celine Juanita is learning keyboard from Calix sir for 4 months. Calix sir is teaching in a professional way, conducting engaging classes efficiently, and clarifying doubts patiently. Class timings are also flexible.
+            Calix Joshua is an extraordinary musician and producer. His production arrangements, beat creation, and professional mixing elevated our gospel project to commercial streaming quality. Highly recommended for any artist or ministry!
           </p>
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-full flex items-center justify-center font-black text-sm text-white"
               style={{ background: 'linear-gradient(135deg, #7c3aed, #db2777)' }}>
-              AJ
+              PW
             </div>
             <div>
-              <div className="text-sm font-bold text-white">A. Jasmine Beulah</div>
-              <div className="text-[11px] text-slate-400">Parent of Celine Juanita · Keyboard Student</div>
+              <div className="text-sm font-bold text-white">PraiseWave Studio Client</div>
+              <div className="text-[11px] text-slate-400">Gospel Artist &amp; Worship Leader</div>
             </div>
             <div className="ml-auto flex gap-0.5">
               {[1,2,3,4,5].map(s => (
@@ -479,19 +479,19 @@ const GospelProduction = () => {
       <section className="py-12 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto text-center">
         <div className="rounded-3xl p-8 border border-white/10 bg-gradient-to-r from-purple-950/40 via-slate-900/80 to-amber-950/30 backdrop-blur-xl">
           <h2 className="font-heading font-bold text-xl sm:text-2xl text-white mb-2">
-            Ready to Produce Gospel Music?
+            Ready to Produce Your Gospel Song?
           </h2>
           <p className="text-xs sm:text-sm text-slate-300 mb-6 max-w-lg mx-auto">
-            Book your 1-on-1 Gospel Electronic Production program with Calix Joshua today.
+            Book your professional Gospel music production project with Calix Joshua today.
           </p>
           <a
-            href={waLink('Gospel Music Production (₹19,999)')}
+            href={waLink('Gospel Music Production Service (₹19,999)')}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-whatsapp !text-xs !py-3 !px-6 inline-flex items-center gap-2"
           >
             <FaWhatsapp className="w-4 h-4" />
-            <span>Chat on WhatsApp (+91 93614 92530)</span>
+            <span>Book Song Production on WhatsApp (+91 93614 92530)</span>
           </a>
         </div>
       </section>
@@ -500,3 +500,4 @@ const GospelProduction = () => {
 }
 
 export default GospelProduction
+

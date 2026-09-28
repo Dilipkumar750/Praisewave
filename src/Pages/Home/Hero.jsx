@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { pianoImg, theoryImg, hero1, hero2, hero3 } from '../../assets/images'
+import { hero1, hero2, hero3 } from '../../assets/images'
 import { FaWhatsapp } from 'react-icons/fa6'
 import { GiGrandPiano, GiPianoKeys, GiMusicalScore } from 'react-icons/gi'
 import { HiArrowRight, HiSparkles } from 'react-icons/hi2'
@@ -7,25 +7,16 @@ import { FiCheck, FiArrowRight } from 'react-icons/fi'
 
 const featuredInstruments = [
   {
-    name: 'Piano & Keyboard Basics',
-    tagline: 'Notes, Chords & Hand Technique',
-    grade: 'Beginner Friendly',
     color: 'from-purple-500 to-indigo-600',
     image: hero1,
     icon: <GiPianoKeys className="w-6 h-6" />,
   },
   {
-    name: 'Keyboard + Music Theory',
-    tagline: 'Scales, Harmony & Music Reading',
-    grade: 'Intermediate Level',
     color: 'from-cyan-500 to-blue-600',
     image: hero2,
     icon: <GiMusicalScore className="w-6 h-6" />,
   },
   {
-    name: 'Church & Worship Keyboard',
-    tagline: 'Live Worship & Ministry Playing',
-    grade: 'Gospel & Ministry Focus',
     color: 'from-amber-500 to-rose-600',
     image: hero3,
     icon: <GiGrandPiano className="w-6 h-6" />,
@@ -33,10 +24,10 @@ const featuredInstruments = [
 ]
 
 const stats = [
-  { value: '500+', label: 'Active Students', sub: 'Kids to Adults' },
+  { value: '75+', label: 'Active Students', sub: 'Kids to Adults' },
   { value: '100%', label: 'Structured Learning', sub: 'Step-by-Step' },
   { value: '10+', label: 'Years Experience', sub: 'Calix Joshua' },
-  { value: '4.9★', label: 'Student Rating', sub: 'Over 300+ Reviews' },
+  { value: '4.9★', label: 'Student Rating', sub: 'Over 100+ Reviews' },
 ]
 
 const Hero = () => {
@@ -93,7 +84,7 @@ const Hero = () => {
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto mb-12">
               <a
-                href="https://id-preview--a3e98e3c-c717-4307-8bd9-33436b07bb93.lovable.app/?__lovable_token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMUhtRVNYUFZ2Nk5IdlQxUUxnU1BmTlVVRnpGMyIsInByb2plY3RfaWQiOiJhM2U5OGUzYy1jNzE3LTQzMDctOGJkOS0zMzQzNmIwN2JiOTMiLCJhY2Nlc3NfdHlwZSI6InByb2plY3QiLCJpc3MiOiJsb3ZhYmxlLWFwaSIsInN1YiI6ImEzZTk4ZTNjLWM3MTctNDMwNy04YmQ5LTMzNDM2YjA3YmI5MyIsImF1ZCI6WyJsb3ZhYmxlLWFwcCJdLCJleHAiOjE3NzUxMzc4MzEsIm5iZiI6MTc3NDUzMzAzMSwiaWF0IjoxNzc0NTMzMDMxfQ.Fk8eKFok4N5j5qt2c7lunbsOPVpLee-bSyFS4Cbe5t532vFiLpLgkKbCIMd3iDIPu22wo9RyWfPjb2h7h2T3kr1Z5pqISozEQXZ-Y9EZaNydtHjCpoL9CQHZpcSVoGnNgivTNrFKgoDfl1BsseKvebANADdh7cjIvTMQMDAiqHnmcJFRg5_v1iUeD52DxEQ6FBq-dilmvv3OwZoPSz0M0i-EFhwBrCqHnW6yBOOj8scH7v7Kvm4fzUcO3CiJYUHAP0VPnViyR8i-cPjHzOl5zpyFrZaygNazo-g5p424UVuLg5tQS8ab8rih_TJfE8wgK4W2ng_ob2fh2JfPdbJEUoYHjN_YFLe9ODTsj44X2MK9RjvemMLWxrBGOwWTFTpVAvXfXzWFM70DGKbOA0UfWpJiIF5sqo0V3JZH4nDc8kaeHRqpDE-_D1JjWeG7x6Y8Pa22ZgViWPG-vHpgn2ZOMyPth_tzG4RS8h6wiNv1h9XMmLmPvYdgOgBfjKcMC-vAsr8Ty3QyubDI3ErHFX3FykKbqmU5kVeo3jo-fdv4wI4VmHDyqQLXLl6tq_F2IeiBTqJjB23c0znd7nsIqFyxmD2G_H7MjrmDcd7NudvHCslR2eYcHls0pidiv4WyEgKVszef_a-UQTmsIag30CkmEx97yxiosfBjZpBTcxoE89I#enroll"
+                href="https://id-preview--a3e98e3c-c717-4307-8bd9-33436b07bb93.lovable.app/?__lovable_token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMUhtRVNYUFZ2Nk5IdlQxUUxnU1BmTlVVRnpGMyIsInByb2plY3RfaWQiOiJhM2U5OGUzYy1jNzE3LTQzMDctOGJkOS0zMzQzNmIwN2JiOTMiLCJhY2Nlc3NfdHlwZSI6InByb2plY3QiLCJpc3OiOiJsb3ZhYmxlLWFwaSIsInN1YiI6ImEzZTk4ZTNjLWM3MTctNDMwNy04YmQ5LTMzNDM2YjA3YmI5MyIsImF1ZCI6WyJsb3ZhYmxlLWFwcCJdLCJleHAiOjE3NzUxMzc4MzEsIm5iZiI6MTc3NDUzMzAzMSwiaWF0IjoxNzc0NTMzMDMxfQ.Fk8eKFok4N5j5qt2c7lunbsOPVpLee-bSyFS4Cbe5t532vFiLpLgkKbCIMd3iDIPu22wo9RyWfPjb2h7h2T3kr1Z5pqISozEQXZ-Y9EZaNydtHjCpoL9CQHZpcSVoGnNgivTNrFKgoDfl1BsseKvebANADdh7cjIvTMQMDAiqHnmcJFRg5_v1iUeD52DxEQ6FBq-dilmvv3OwZoPSz0M0i-EFhwBrCqHnW6yBOOj8scH7v7Kvm4fzUcO3CiJYUHAP0VPnViyR8i-cPjHzOl5zpyFrZaygNazo-g5p424UVuLg5tQS8ab8rih_TJfE8wgK4W2ng_ob2fh2JfPdbJEUoYHjN_YFLe9ODTsj44X2MK9RjvemMLWxrBGOwWTFTpVAvXfXzWFM70DGKbOA0UfWpJiIF5sqo0V3JZH4nDc8kaeHRqpDE-_D1JjWeG7x6Y8Pa22ZgViWPG-vHpgn2ZOMyPth_tzG4RS8h6wiNv1h9XMmLmPvYdgOgBfjKcMC-vAsr8Ty3QyubDI3ErHFX3FykKbqmU5kVeo3jo-fdv4wI4VmHDyqQLXLl6tq_F2IeiBTqJjB23c0znd7nsIqFyxmD2G_H7MjrmDcd7NudvHCslR2eYcHls0pidiv4WyEgKVszef_a-UQTmsIag30CkmEx97yxiosfBjZpBTcxoE89I#enroll"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary flex items-center justify-center gap-3 text-sm py-3.5 px-7 shadow-xl shadow-purple-900/30 group"
@@ -171,17 +162,10 @@ const Hero = () => {
                 <div className="relative h-44 sm:h-48 overflow-hidden group">
                   <img
                     src={current.image}
-                    alt={current.name}
+                    alt="PraiseWave Music Studio"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#090d26] via-[#090d26]/40 to-transparent" />
-                  
-                  {/* Category & Certification Badge */}
-                  <div className="absolute top-3 left-3 flex items-center gap-2">
-                    <span className="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-black/60 backdrop-blur-md text-cyan-300 border border-cyan-400/30">
-                      {current.grade}
-                    </span>
-                  </div>
 
                   <div className="absolute top-3 right-3">
                     <div className={`w-9 h-9 rounded-xl bg-gradient-to-tr ${current.color} flex items-center justify-center text-white shadow-lg`}>
@@ -190,25 +174,14 @@ const Hero = () => {
                   </div>
                 </div>
 
-                <div className="p-5 pt-3">
-                  <div className="text-[11px] font-bold text-purple-400 tracking-wider uppercase mb-1 flex items-center gap-1.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-purple-400" />
-                    Masterclass Program
-                  </div>
-                  <h2 className="text-xl sm:text-2xl font-bold text-white mb-1.5">
-                    {current.name}
-                  </h2>
-                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">
-                    {current.tagline}. Tailored curriculum with ear-training, sheet notation, and live performance opportunities.
-                  </p>
-
+                <div className="p-4">
                   {/* Instrument Selector Dots */}
-                  <div className="flex items-center gap-2 pt-3 border-t border-white/10">
+                  <div className="flex items-center gap-2">
                     {featuredInstruments.map((item, i) => (
                       <button
-                        key={item.name}
+                        key={i}
                         onClick={() => setActiveIdx(i)}
-                        aria-label={`Select ${item.name}`}
+                        aria-label={`Switch slide ${i + 1}`}
                         className={`h-2 rounded-full transition-all duration-300 ${activeIdx === i ? 'w-8 bg-gradient-to-r from-purple-600 to-orange-400' : 'w-2 bg-white/20 hover:bg-white/40'
                           }`}
                       />
