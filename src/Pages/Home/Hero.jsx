@@ -206,21 +206,6 @@ const Hero = () => {
                   <div className="text-[10px] text-slate-400 mt-1">1-on-1 with Mentor</div>
                 </div>
               </div>
-
-              {/* Floating Testimonial Pill */}
-              <div className="mt-4 glass-card rounded-2xl p-3.5 flex items-center gap-3 border border-white/10 animate-float-slow">
-                <div className="w-9 h-9 rounded-full bg-gradient-to-tr from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold text-xs flex-shrink-0">
-                  AR
-                </div>
-                <div className="min-w-0">
-                  <div className="text-xs font-semibold text-white truncate">"Passed Grade 8 with Distinction!"</div>
-                  <div className="text-[10px] text-slate-400 truncate">Praisewave Student · Keyboard Graduate</div>
-                </div>
-                <div className="ml-auto flex text-amber-400 text-xs flex-shrink-0">
-                  ★★★★★
-                </div>
-              </div>
-
             </div>
 
           </div>

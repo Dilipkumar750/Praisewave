@@ -20,8 +20,8 @@ import {
 import { HiSparkles, HiOutlineLightBulb } from 'react-icons/hi2'
 import { FiCheck, FiX, FiAlertCircle } from 'react-icons/fi'
 
-const categories = ['Piano Technique', 'Chord Progressions', 'Music Theory', 'Rhythm & Timing', 'Hand Technique', 'Worship Keyboard', 'Gospel Production']
-const tags = ['Piano', 'Chords', 'Theory', 'Rhythm', 'Technique', 'Worship', 'Production']
+const categories = ['Keyboard Technique', 'Chord Progressions', 'Music Theory', 'Rhythm & Timing', 'Hand Technique', 'Worship Keyboard', 'Production']
+const tags = ['Keyboard', 'Chords', 'Theory', 'Rhythm', 'Technique', 'Worship', 'Production']
 
 const AdminDashboard = () => {
   const [blogs, setBlogs] = useState([])

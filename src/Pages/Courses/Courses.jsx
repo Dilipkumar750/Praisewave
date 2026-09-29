@@ -79,7 +79,7 @@ const keyboardPlans = [
       'Flexible Available Slots (Morning & Evening)',
       'All Advanced Chords & Formats',
       'Backing Grooves & Rhythm Locking',
-      'Reharmonisation & Live Worship Techniques',
+      'Reharmonisation & Live Performance Techniques',
       '100% Live 1-on-1 Online Class',
     ],
     cta: 'Level Up Your Playing →',
@@ -89,65 +89,6 @@ const keyboardPlans = [
     badge: 'Advanced',
     badgeColor: 'bg-fuchsia-500/15 text-fuchsia-300 border-fuchsia-500/25',
     icon: <GiGrandPiano className="w-6 h-6" />,
-  },
-]
-
-/* ─── Production Plans ───────────────────────── */
-const productionPlans = [
-  {
-    id: 'prod-1',
-    emoji: '🎧',
-    title: 'Gospel Electronic Production Service',
-    category: 'Production Service',
-    duration: 'Full Electronic Song Production + Mix & Mastering',
-    fee: '₹19,999',
-    period: '/ song',
-    classes: 'Per Song Service',
-    classDuration: 'WAV + Multitrack Stems',
-    desc: 'Commercial electronic Gospel music production for artists and ministries — beat programming, synth layering, vocal processing, mixing, and streaming mastering.',
-    features: [
-      'Full Electronic Gospel Song Production',
-      'Gospel Beat & Rhythm Programming',
-      'Synth Layering & Sound Design',
-      'Choir & Vocal Arrangement & Tuning',
-      'Professional Mix & Streaming Master',
-      'Complete Multitrack Stems & High-Res WAV Delivery',
-      'Direct Producer Collaboration with Calix Joshua',
-    ],
-    cta: 'Book Production Service →',
-    accent: 'from-amber-500 to-orange-600',
-    border: 'border-amber-500/30',
-    glow: 'shadow-amber-900/30',
-    badge: '₹19,999 / Song',
-    badgeColor: 'bg-amber-500/15 text-amber-300 border-amber-500/25',
-  },
-  {
-    id: 'prod-2',
-    emoji: '🎹',
-    title: 'Full Gospel Production (Live Guitars)',
-    category: 'Production Service',
-    duration: 'Electronic + Live Guitars Song Production',
-    fee: '₹29,999',
-    period: '/ song',
-    classes: 'Per Song Service',
-    classDuration: 'WAV + Multitrack Stems',
-    desc: 'Full-scale Gospel music production featuring live electric and acoustic guitars, Melodyne vocal tuning, mixing, and release-ready mastering.',
-    features: [
-      'Complete Gospel Music Production Pipeline',
-      'Electronic Beat & Rhythm Programming',
-      'Live Electric & Acoustic Guitar Recording',
-      'Vocal Tuning & Pitch Correction with Melodyne',
-      'Professional Mix & Streaming Master',
-      'Complete Multitrack Stems & High-Res WAV Delivery',
-      'Direct Producer Collaboration with Calix Joshua',
-    ],
-    cta: 'Book Production Service →',
-    accent: 'from-rose-500 to-red-600',
-    border: 'border-rose-500/30',
-    glow: 'shadow-rose-900/30',
-    badge: 'Live Guitars · Per Song',
-    badgeColor: 'bg-rose-500/15 text-rose-300 border-rose-500/25',
-    featured: true,
   },
 ]
 
@@ -275,7 +216,7 @@ const KeyboardCard = ({ plan }) => (
         </span>
       </div>
       <h2 className="text-xl font-extrabold text-white mb-1 leading-tight">{plan.title}</h2>
-      
+
       {/* Fee & Schedule Pill */}
       <div className="flex items-baseline gap-1 mb-2">
         <span className="text-2xl font-black gradient-text-gold">{plan.fee}</span>
@@ -294,7 +235,7 @@ const KeyboardCard = ({ plan }) => (
       </div>
 
       <p className="text-sm text-slate-400 leading-relaxed mb-5">{plan.desc}</p>
-      
+
       <div className="pt-4 border-t border-white/10 flex-1 mb-6">
         <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-3">
           Course Structure &amp; Syllabus:
@@ -302,64 +243,6 @@ const KeyboardCard = ({ plan }) => (
         <FeatureList features={plan.features} />
       </div>
 
-      <a
-        href={waLink(plan.title)}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="btn-primary w-full !text-xs !py-3 flex items-center justify-center gap-2 group mt-auto"
-      >
-        <FaWhatsapp className="w-3.5 h-3.5 text-emerald-300" />
-        <span>{plan.cta}</span>
-        <HiArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
-      </a>
-    </div>
-  </div>
-)
-
-/* ─── Production Card Component ──────────────── */
-const ProductionCard = ({ plan }) => (
-  <div
-    className={`glass-card glass-card-hover rounded-3xl flex flex-col border ${plan.border} shadow-2xl ${plan.glow} overflow-hidden relative transition-all duration-300 ${plan.featured ? 'ring-1 ring-rose-500/40' : ''}`}
-  >
-    {plan.featured && (
-      <div className="absolute top-4 right-4 px-2.5 py-1 rounded-full text-[10px] font-black bg-gradient-to-r from-rose-500 to-red-500 text-white uppercase tracking-wider shadow-lg z-10">
-        Best Value
-      </div>
-    )}
-    <div className={`h-1.5 w-full bg-gradient-to-r ${plan.accent}`} />
-    <div className="p-8 pt-7 flex flex-col flex-1">
-      <div className="flex items-center gap-3 mb-5">
-        <span className="text-4xl">{plan.emoji}</span>
-        <span className={`px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider border ${plan.badgeColor}`}>
-          {plan.badge}
-        </span>
-      </div>
-      <h2 className="text-xl font-extrabold text-white mb-1 leading-tight">{plan.title}</h2>
-      
-      <div className="flex items-baseline gap-2 mb-2">
-        <span className="text-2xl font-black gradient-text-gold">{plan.fee}</span>
-      </div>
-
-      <div className="flex flex-wrap items-center gap-2 mb-4">
-        <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-[11px] font-bold bg-amber-500/15 text-amber-300 border border-amber-500/25">
-          <FaCalendarDays className="w-3 h-3 text-amber-400" />
-          {plan.classes}
-        </span>
-        <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-[11px] font-bold bg-cyan-500/15 text-cyan-300 border border-cyan-500/25">
-          <FaClock className="w-3 h-3 text-cyan-400" />
-          {plan.classDuration || '45–50 Mins'}
-        </span>
-      </div>
-
-      <div className="text-xs text-slate-400 font-semibold mb-3">{plan.duration}</div>
-      <p className="text-sm text-slate-400 leading-relaxed mb-5">{plan.desc}</p>
-      
-      <div className="pt-4 border-t border-white/10 flex-1 mb-6">
-        <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-3">
-          Service Includes:
-        </div>
-        <FeatureList features={plan.features} />
-      </div>
       <a
         href={waLink(plan.title)}
         target="_blank"
@@ -388,7 +271,7 @@ const TheoryCard = ({ plan }) => (
         </span>
       </div>
       <h2 className="text-xl font-extrabold text-white mb-1 leading-tight">{plan.title}</h2>
-      
+
       <div className="flex items-baseline gap-1 mb-2">
         <span className="text-2xl font-black gradient-text-gold">{plan.fee}</span>
         <span className="text-xs text-slate-400 font-semibold">{plan.period}</span>
@@ -407,7 +290,7 @@ const TheoryCard = ({ plan }) => (
 
       <div className="text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-3">{plan.level}</div>
       <p className="text-sm text-slate-400 leading-relaxed mb-5">{plan.desc}</p>
-      
+
       <div className="pt-4 border-t border-white/10 flex-1 mb-6">
         <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-3">
           You'll Learn:
@@ -431,13 +314,12 @@ const TheoryCard = ({ plan }) => (
 const Courses = () => {
   const [activeTab, setActiveTab] = useState('all')
 
-  const totalCount = keyboardPlans.length + productionPlans.length + theoryPlans.length
+  const totalCount = keyboardPlans.length + theoryPlans.length
 
   const tabs = [
     { id: 'all', label: '✨ All Courses', count: totalCount },
-    { id: 'keyboard', label: '🎹 Keyboard', count: keyboardPlans.length },
-    { id: 'production', label: '🎧 Production', count: productionPlans.length },
-    { id: 'theory', label: '🎼 Theory', count: theoryPlans.length },
+    { id: 'keyboard', label: '🎹 Keyboard Courses', count: keyboardPlans.length },
+    { id: 'theory', label: '🎼 Music Theory', count: theoryPlans.length },
   ]
 
   return (
@@ -508,8 +390,8 @@ const Courses = () => {
             type="button"
             onClick={() => setActiveTab(tab.id)}
             className={`px-5 sm:px-6 py-2.5 rounded-full text-xs font-bold tracking-wide transition-all duration-200 flex items-center gap-2 ${activeTab === tab.id
-                ? 'bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-500 text-white shadow-lg shadow-purple-500/30 scale-105'
-                : 'glass-pill text-slate-300 hover:text-white hover:bg-white/10 border border-white/10'
+              ? 'bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-500 text-white shadow-lg shadow-purple-500/30 scale-105'
+              : 'glass-pill text-slate-300 hover:text-white hover:bg-white/10 border border-white/10'
               }`}
           >
             <span>{tab.label}</span>
@@ -531,7 +413,7 @@ const Courses = () => {
                   Category · 01
                 </span>
                 <h2 className="font-heading font-extrabold text-2xl sm:text-3xl text-white flex items-center gap-2 mt-1">
-                  🎹 Keyboard &amp; Piano Courses
+                  🎹 Keyboard Courses
                 </h2>
                 <p className="text-xs text-slate-400 mt-1">
                   Monthly 8 Classes · 45–50 Mins Per Session · Flexible Available Slots
@@ -553,42 +435,12 @@ const Courses = () => {
             </div>
           </div>
 
-          {/* Production Section in All */}
-          <div>
-            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3 mb-8 border-b border-white/10 pb-4">
-              <div>
-                <span className="text-[11px] font-bold text-amber-400 uppercase tracking-widest">
-                  Category · 02
-                </span>
-                <h2 className="font-heading font-extrabold text-2xl sm:text-3xl text-white flex items-center gap-2 mt-1">
-                  🎧 Music Production &amp; Audio
-                </h2>
-                <p className="text-xs text-slate-400 mt-1">
-                  Full Electronic Production + Mix &amp; Mastering · 1-on-1 Sessions · Flexible Timings
-                </p>
-              </div>
-              <button
-                type="button"
-                onClick={() => setActiveTab('production')}
-                className="text-xs font-bold text-amber-400 hover:text-amber-300 flex items-center gap-1 transition-colors self-start sm:self-auto"
-              >
-                <span>View Only Production ({productionPlans.length})</span>
-                <span>→</span>
-              </button>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              {productionPlans.map((plan) => (
-                <ProductionCard key={plan.id} plan={plan} />
-              ))}
-            </div>
-          </div>
-
           {/* Theory Section in All */}
           <div>
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3 mb-8 border-b border-white/10 pb-4">
               <div>
                 <span className="text-[11px] font-bold text-emerald-400 uppercase tracking-widest">
-                  Category · 03
+                  Category · 02
                 </span>
                 <h2 className="font-heading font-extrabold text-2xl sm:text-3xl text-white flex items-center gap-2 mt-1">
                   🎼 Music Theory Grades
@@ -620,15 +472,6 @@ const Courses = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20 animate-fadeIn">
           {keyboardPlans.map((plan) => (
             <KeyboardCard key={plan.id} plan={plan} />
-          ))}
-        </div>
-      )}
-
-      {/* ─── Production Only Tab ─────────────────── */}
-      {activeTab === 'production' && (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-20 animate-fadeIn">
-          {productionPlans.map((plan) => (
-            <ProductionCard key={plan.id} plan={plan} />
           ))}
         </div>
       )}

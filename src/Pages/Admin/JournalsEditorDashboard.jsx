@@ -37,7 +37,7 @@ const JournalsEditorDashboard = () => {
   const [content, setContent] = useState('')
 
   // Advanced metadata
-  const [category, setCategory] = useState('Piano Technique')
+  const [category, setCategory] = useState('Keyboard Technique')
   const [categoryColor, setCategoryColor] = useState('#8b5cf6')
   const [readTime, setReadTime] = useState('5 min read')
   const [author, setAuthor] = useState('Calix Joshua')
@@ -54,7 +54,7 @@ const JournalsEditorDashboard = () => {
   const [success, setSuccess] = useState('')
 
   const categoryColorMap = {
-    'Piano Technique': '#8b5cf6',
+    'Keyboard Technique': '#8b5cf6',
     'Chord Progressions': '#06b6d4',
     'Music Theory': '#10b981',
     'Rhythm & Timing': '#f59e0b',
@@ -103,7 +103,7 @@ const JournalsEditorDashboard = () => {
       const data = await api.journals.getById(id)
       if (!data) throw new Error('Article not found')
       setTitle(data.title || '')
-      setCategory(data.category || 'Piano Technique')
+      setCategory(data.category || 'Keyboard Technique')
       setCategoryColor(data.categoryColor || '#8b5cf6')
       setDate(data.date || '')
       setReadTime(data.readTime || '5 min read')
@@ -113,7 +113,7 @@ const JournalsEditorDashboard = () => {
       setImage(data.image || '')
       setImagePreview(data.image || '')
       setSlug(data.slug || data.title?.toLowerCase().replace(/[^a-z0-9]+/g, '-') || '')
-      setTags(data.tag || (data.tags ? data.tags.join(', ') : 'Piano'))
+      setTags(data.tag || (data.tags ? data.tags.join(', ') : 'Keyboard'))
       setPublished(data.published !== undefined ? data.published : true)
 
       // Transform structured sections into rich HTML if not already HTML
@@ -423,7 +423,7 @@ const JournalsEditorDashboard = () => {
                   type="text"
                   value={tags}
                   onChange={(e) => setTags(e.target.value)}
-                  placeholder="Piano, Chords, Theory"
+                  placeholder="Keyboard, Chords, Theory"
                   className="w-full px-3.5 py-2.5 border border-white/10 rounded-xl focus:outline-none focus:border-cyan-400 bg-white/5 text-sm text-white transition-all"
                 />
               </div>
@@ -695,8 +695,8 @@ const JournalsEditorDashboard = () => {
                   onChange={(e) => setCategory(e.target.value)}
                   className="w-full px-3 py-2 border border-white/10 rounded-lg text-xs text-white bg-black/60 focus:outline-none focus:border-cyan-400 cursor-pointer"
                 >
-                  <option value="Piano Technique" className="bg-[#0b0f24] text-white">
-                    Piano Technique
+                  <option value="Keyboard Technique" className="bg-[#0b0f24] text-white">
+                    Keyboard Technique
                   </option>
                   <option value="Chord Progressions" className="bg-[#0b0f24] text-white">
                     Chord Progressions

@@ -4,14 +4,14 @@ export const blogArticles = [
   {
     id: 1,
     slug: '5-essential-finger-dexterity-drills-every-keyboard-player-must-practice-daily',
-    category: 'Piano Technique',
+    category: 'Keyboard Technique',
     title: '5 Essential Finger Dexterity Drills Every Keyboard Player Must Practice Daily',
     excerpt: 'Hanon and Czerny exercises broken down for modern keyboard players. How 15 minutes of intentional slow practice builds velocity, clean articulation, and prevents wrist fatigue.',
     date: 'Sep 12, 2026',
     readTime: '5 min read',
     author: 'Calix Joshua',
     authorRole: 'Founder & Lead Mentor, PraiseWave',
-    tag: 'Piano',
+    tag: 'Keyboard',
     image: pianoImg,
     accent: 'from-purple-600 to-indigo-700',
     intro: 'Whether you are sitting down at a keyboard for the very first time or looking to break through a technical plateau, hand mechanics and finger independence determine your speed, control, and musical expression. At PraiseWave, we teach students that clean playing is not about brute strength — it is about efficiency of motion and relaxed wrist alignment.',
@@ -146,7 +146,7 @@ export const blogArticles = [
     sections: [
       {
         heading: '1. The Disappearing Metronome Technique',
-        body: 'When your rhythm is perfectly locked in with the metronome, your brain experiences an optical-audio illusion: the click seems to "disappear" beneath your piano strike. If you hear the click distinctly before or after your note, you are rushing or lagging. Practice single-finger strikes on beat until the click vanishes.',
+        body: 'When your rhythm is perfectly locked in with the metronome, your brain experiences an optical-audio illusion: the click seems to "disappear" beneath your keyboard strike. If you hear the click distinctly before or after your note, you are rushing or lagging. Practice single-finger strikes on beat until the click vanishes.',
       },
       {
         heading: '2. Subdividing 8ths and 16ths in Your Head',
@@ -187,7 +187,7 @@ export const blogArticles = [
         body: 'In worship keyboard playing, the left hand rarely plays full dense triads in the low register, which creates muddy sound. Instead, master the open 1-5-8 shell voicing (e.g. C1 - G1 - C2). This provides powerful, clean bass support without cluttering the vocal or guitar frequencies.',
       },
       {
-        heading: '3. Polyrhythmic Tapping Drills Away from the Piano',
+        heading: '3. Polyrhythmic Tapping Drills Away from the Keyboard',
         body: 'Sit at a desk. Tap steady quarter notes with your left hand (1, 2, 3, 4) while tapping eighth notes with your right hand (1-and, 2-and, 3-and, 4-and). Once comfortable, reverse hands. Next, try 3 against 2 polyrhythms. Training your motor cortex away from the keys accelerates keyboard coordination tenfold.',
       },
     ],
@@ -210,23 +210,23 @@ export const blogArticles = [
     tag: 'Worship',
     image: theoryImg,
     accent: 'from-yellow-600 to-amber-700',
-    intro: 'Playing keyboard in a live church or worship team setting is a unique discipline. Unlike solo piano performances where you fill every sonic space, band keyboard playing is all about space, frequency awareness, and supporting the congregation’s focus.',
+    intro: 'Playing keyboard in a live church or worship team setting is a unique discipline. Unlike solo keyboard performances where you fill every sonic space, band keyboard playing is all about space, frequency awareness, and supporting the congregation’s focus.',
     sections: [
       {
-        heading: '1. Tone Layering: Piano + Ambient Pad Magic',
-        body: 'The signature sound of modern praise and worship is a warm grand piano layered with a subtle, lush analog or string pad with high cut. The pad fills the background space between phrases, allowing you to play sparse, tasteful piano chords without awkward silence.',
+        heading: '1. Tone Layering: Keyboard + Ambient Pad Magic',
+        body: 'The signature sound of modern praise and worship is a warm keyboard voice layered with a subtle, lush analog or string pad with high cut. The pad fills the background space between phrases, allowing you to play sparse, tasteful keyboard chords without awkward silence.',
       },
       {
         heading: '2. Stay Out of the Bass Player’s Frequency Lane',
-        body: 'The number one mistake beginner church pianists make is pounding heavy low octaves with their left hand. If your church has a bass guitarist, stay in the mid-register (C3 to C5) with simple inversions and light root taps. Let the bassist handle the low rumble.',
+        body: 'The number one mistake beginner church keyboardists make is pounding heavy low octaves with their left hand. If your church has a bass guitarist, stay in the mid-register (C3 to C5) with simple inversions and light root taps. Let the bassist handle the low rumble.',
       },
       {
         heading: '3. The Power of Space & Dynamic Arcs',
-        body: 'During intimate prayer or vocal-led verses, drop down to single, sustained whole-note chords (Pad/Piano swell). Build into rhythmic eighth-note broken chords during the chorus, and unleash full octave voicings only on the explosive climax. Dynamics tell the emotional story.',
+        body: 'During intimate prayer or vocal-led verses, drop down to single, sustained whole-note chords (Pad/Keyboard swell). Build into rhythmic eighth-note broken chords during the chorus, and unleash full octave voicings only on the explosive climax. Dynamics tell the emotional story.',
       },
     ],
     keyTakeaways: [
-      'Layer a warm ambient pad with piano to create smooth atmospheric transitions.',
+      'Layer a warm ambient pad with keyboard to create smooth atmospheric transitions.',
       'Leave the sub-bass frequencies for the bass guitarist — play upper-register voicings.',
       'Serve the room and congregation — less is often vastly more powerful.',
     ],

@@ -1,6 +1,7 @@
-import { FaWhatsapp, FaChurch } from 'react-icons/fa6'
+import { useState } from 'react'
+import { FaWhatsapp, FaChurch, FaYoutube, FaPlay } from 'react-icons/fa6'
 import { HiArrowRight, HiSparkles } from 'react-icons/hi2'
-import { FiCheck } from 'react-icons/fi'
+import { FiCheck, FiExternalLink, FiVolume2 } from 'react-icons/fi'
 import {
   gospelWorshipImg,
   gospelKeysDawImg,
@@ -12,6 +13,70 @@ import {
 
 const waLink = (title) =>
   `https://wa.me/919361492530?text=Hi%20PraiseWave!%20I%20want%20to%20book%20the%20${encodeURIComponent(title)}%20service.%20Please%20share%20details.`
+
+/* ─── Sample Gospel Production Videos ────────────────────── */
+const sampleVideos = [
+  {
+    id: '3W0LHTUzAAk',
+    title: 'Gospel Song Production Showcase 01',
+    subtitle: 'Produced, Mixed & Mastered by Calix Joshua',
+    url: 'https://youtu.be/3W0LHTUzAAk?si=O92WuXiHlgKfmJA9',
+    embedUrl: 'https://www.youtube-nocookie.com/embed/3W0LHTUzAAk?autoplay=1&rel=0',
+    thumbnail: 'https://img.youtube.com/vi/3W0LHTUzAAk/hqdefault.jpg',
+    maxThumbnail: 'https://img.youtube.com/vi/3W0LHTUzAAk/maxresdefault.jpg',
+    badge: 'Sample 01',
+  },
+  {
+    id: 'JWkAp9s5qQU',
+    title: 'Gospel Song Production Showcase 02',
+    subtitle: 'Produced, Mixed & Mastered by Calix Joshua',
+    url: 'https://youtu.be/JWkAp9s5qQU?si=UOgBJMvaXc4dU0cs',
+    embedUrl: 'https://www.youtube-nocookie.com/embed/JWkAp9s5qQU?autoplay=1&rel=0',
+    thumbnail: 'https://img.youtube.com/vi/JWkAp9s5qQU/hqdefault.jpg',
+    maxThumbnail: 'https://img.youtube.com/vi/JWkAp9s5qQU/maxresdefault.jpg',
+    badge: 'Sample 02',
+  },
+  {
+    id: '3oSNOlbdJfI',
+    title: 'Gospel Song Production Showcase 03',
+    subtitle: 'Produced, Mixed & Mastered by Calix Joshua',
+    url: 'https://youtu.be/3oSNOlbdJfI?si=2GIUpTnPvCQwALpb',
+    embedUrl: 'https://www.youtube-nocookie.com/embed/3oSNOlbdJfI?autoplay=1&rel=0',
+    thumbnail: 'https://img.youtube.com/vi/3oSNOlbdJfI/hqdefault.jpg',
+    maxThumbnail: 'https://img.youtube.com/vi/3oSNOlbdJfI/maxresdefault.jpg',
+    badge: 'Sample 03',
+  },
+  {
+    id: 'ELLF1Ora0Fc',
+    title: 'Gospel Song Production Showcase 04',
+    subtitle: 'Produced, Mixed & Mastered by Calix Joshua',
+    url: 'https://youtu.be/ELLF1Ora0Fc?si=Tp8av27opkmD70jU',
+    embedUrl: 'https://www.youtube-nocookie.com/embed/ELLF1Ora0Fc?autoplay=1&rel=0',
+    thumbnail: 'https://img.youtube.com/vi/ELLF1Ora0Fc/hqdefault.jpg',
+    maxThumbnail: 'https://img.youtube.com/vi/ELLF1Ora0Fc/maxresdefault.jpg',
+    badge: 'Sample 04',
+  },
+  {
+    id: 'QCdCVisTTGc',
+    title: 'Gospel Song Production Showcase 05',
+    subtitle: 'Produced, Mixed & Mastered by Calix Joshua',
+    url: 'https://youtu.be/QCdCVisTTGc?si=c77c0y2PuyE6SmSm',
+    embedUrl: 'https://www.youtube-nocookie.com/embed/QCdCVisTTGc?autoplay=1&rel=0',
+    thumbnail: 'https://img.youtube.com/vi/QCdCVisTTGc/hqdefault.jpg',
+    maxThumbnail: 'https://img.youtube.com/vi/QCdCVisTTGc/maxresdefault.jpg',
+    badge: 'Sample 05',
+  },
+  {
+    id: 'o0s9Yqk0-lM',
+    title: 'Gospel Song Production Showcase 06',
+    subtitle: 'Produced, Mixed & Mastered by Calix Joshua',
+    url: 'https://youtu.be/o0s9Yqk0-lM?si=AtfRTIgwj-bzHv3_',
+    embedUrl: 'https://www.youtube-nocookie.com/embed/o0s9Yqk0-lM?autoplay=1&rel=0',
+    thumbnail: 'https://img.youtube.com/vi/o0s9Yqk0-lM/hqdefault.jpg',
+    maxThumbnail: 'https://img.youtube.com/vi/o0s9Yqk0-lM/maxresdefault.jpg',
+    badge: 'Sample 06',
+  },
+]
 
 /* ─── Production Service Breakdown ────────────────────────── */
 const modules = [
@@ -153,6 +218,17 @@ const packages = [
 ]
 
 const GospelProduction = () => {
+  const [activeVideoIndex, setActiveVideoIndex] = useState(0)
+  const [isPlaying, setIsPlaying] = useState(false)
+  const currentVideo = sampleVideos[activeVideoIndex] || sampleVideos[0]
+  const [thumbSrc, setThumbSrc] = useState(currentVideo.maxThumbnail)
+
+  const handleSelectVideo = (idx) => {
+    setActiveVideoIndex(idx)
+    setThumbSrc(sampleVideos[idx].maxThumbnail)
+    setIsPlaying(true)
+  }
+
   return (
     <div className="pb-24">
       {/* ═══════════════════════════════════════════════════════
@@ -296,6 +372,190 @@ const GospelProduction = () => {
             </div>
 
           </div>
+        </div>
+      </section>
+
+      {/* ─── Sample Songs Showcase Section ───────────────────── */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+        <div className="text-center max-w-2xl mx-auto mb-10">
+          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-rose-500/10 text-rose-300 border border-rose-500/25 mb-3">
+            <FaYoutube className="w-4 h-4 text-rose-500" />
+            <span>Sample Production Songs (6 Tracks)</span>
+          </span>
+          <h2 className="font-heading font-black text-2xl sm:text-3xl lg:text-4xl text-white tracking-tight">
+            Listen to Our <span className="gradient-text-vibrant">Gospel Production Work</span>
+          </h2>
+          <p className="text-slate-300 text-xs sm:text-sm mt-3 leading-relaxed">
+            Experience the audio depth, arrangement quality, drum programming, and commercial mixing standard produced by Calix Joshua at PraiseWave.
+          </p>
+        </div>
+
+        {/* Video Card Container */}
+        <div className="glass-card rounded-3xl overflow-hidden border border-rose-500/20 shadow-2xl bg-slate-950/80 backdrop-blur-xl transition-all duration-300">
+          {/* 16:9 Video Wrapper */}
+          <div className="relative aspect-video w-full bg-black overflow-hidden group">
+            {!isPlaying ? (
+              <div
+                className="relative w-full h-full cursor-pointer overflow-hidden"
+                onClick={() => setIsPlaying(true)}
+              >
+                {/* Thumbnail Image with zoom effect */}
+                <img
+                  src={thumbSrc}
+                  onError={() => setThumbSrc(currentVideo.thumbnail)}
+                  alt={currentVideo.title}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100"
+                />
+
+                {/* Dark Vignette Gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-black/40" />
+
+                {/* Top Badge Overlay */}
+                <div className="absolute top-4 left-4 sm:top-6 sm:left-6 flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-black/70 border border-white/15 backdrop-blur-md">
+                  <span className="w-2.5 h-2.5 rounded-full bg-rose-500 animate-pulse" />
+                  <span className="text-xs font-bold text-white tracking-wide">
+                    {currentVideo.badge} — YouTube Sample Video
+                  </span>
+                </div>
+
+                {/* Centered Glowing Play Button */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="relative flex items-center justify-center">
+                    {/* Glowing outer rings */}
+                    <div className="absolute w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-rose-500/30 animate-ping opacity-75" />
+                    <div className="absolute w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-rose-600/40 blur-sm group-hover:scale-110 transition-transform duration-300" />
+
+                    {/* Main Button */}
+                    <button
+                      type="button"
+                      aria-label="Play sample video"
+                      className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-tr from-rose-600 to-purple-600 flex items-center justify-center text-white shadow-2xl border-2 border-white/30 group-hover:scale-110 transition-transform duration-300"
+                    >
+                      <FaPlay className="w-6 h-6 sm:w-8 sm:h-8 ml-1 text-white drop-shadow-md" />
+                    </button>
+                  </div>
+                </div>
+
+                {/* Bottom Overlay Info inside thumbnail */}
+                <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 flex items-end justify-between gap-4">
+                  <div className="max-w-xl">
+                    <span className="inline-block text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded bg-purple-500/20 text-purple-300 border border-purple-500/30 mb-1.5">
+                      {currentVideo.badge} · Gospel Music Sample
+                    </span>
+                    <h3 className="text-base sm:text-xl font-bold text-white leading-snug drop-shadow-md">
+                      {currentVideo.title}
+                    </h3>
+                    <p className="text-xs text-slate-300 hidden sm:block mt-1">
+                      {currentVideo.subtitle}
+                    </p>
+                  </div>
+                  <div className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-black/60 border border-white/10 text-xs font-semibold text-rose-300 whitespace-nowrap">
+                    <FiVolume2 className="w-4 h-4 text-rose-400" />
+                    <span>Click to Play</span>
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <iframe
+                key={currentVideo.id}
+                src={currentVideo.embedUrl}
+                title={`${currentVideo.title} YouTube Video`}
+                className="w-full h-full border-0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            )}
+          </div>
+
+          {/* Video Bottom Details & Actions Bar */}
+          <div className="p-5 sm:p-7 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 bg-slate-900/60 border-t border-white/10">
+            <div>
+              <div className="flex items-center gap-2 mb-1">
+                <span className="text-xs font-bold text-purple-400">Produced by Calix Joshua</span>
+                <span className="text-slate-600">•</span>
+                <span className="text-xs text-slate-400">PraiseWave Music Academy</span>
+              </div>
+              <p className="text-xs text-slate-300 max-w-xl leading-relaxed">
+                Check out this sample gospel song production showcasing beat programming, sound design, pad layering, and professional mixing quality.
+              </p>
+            </div>
+
+            <div className="flex flex-wrap sm:flex-nowrap items-center gap-3 w-full sm:w-auto">
+              <a
+                href={currentVideo.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-rose-600/20 hover:bg-rose-600/30 text-rose-300 border border-rose-500/30 text-xs font-bold transition-colors"
+              >
+                <FaYoutube className="w-4 h-4 text-rose-500" />
+                <span>Watch on YouTube</span>
+                <FiExternalLink className="w-3.5 h-3.5" />
+              </a>
+
+              <a
+                href={waLink('Gospel Music Production Service (₹19,999/song)')}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white text-xs font-bold shadow-lg transition-all"
+              >
+                <FaWhatsapp className="w-4 h-4 text-emerald-200" />
+                <span>Book Production</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* 6 Video Selector Grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3.5 mt-6">
+          {sampleVideos.map((video, idx) => {
+            const isActive = idx === activeVideoIndex
+            return (
+              <div
+                key={video.id}
+                onClick={() => handleSelectVideo(idx)}
+                className={`relative group cursor-pointer rounded-2xl overflow-hidden border transition-all duration-300 p-1.5 bg-slate-950/70 ${
+                  isActive
+                    ? 'border-rose-500 shadow-lg shadow-rose-500/20 scale-[1.02]'
+                    : 'border-white/10 hover:border-rose-500/50 hover:scale-[1.01]'
+                }`}
+              >
+                <div className="relative aspect-video rounded-xl overflow-hidden bg-black">
+                  <img
+                    src={video.maxThumbnail}
+                    onError={(e) => { e.target.src = video.thumbnail }}
+                    alt={video.title}
+                    className={`w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 ${
+                      isActive ? 'opacity-100' : 'opacity-75 group-hover:opacity-100'
+                    }`}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80" />
+
+                  {/* Badge */}
+                  <span className={`absolute top-1.5 left-1.5 px-2 py-0.5 rounded text-[9px] font-bold ${
+                    isActive ? 'bg-rose-600 text-white shadow' : 'bg-black/70 text-slate-300'
+                  }`}>
+                    {video.badge}
+                  </span>
+
+                  {/* Small Play icon overlay */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className={`w-8 h-8 rounded-full flex items-center justify-center text-white transition-transform ${
+                      isActive ? 'bg-rose-600 scale-110 shadow-md' : 'bg-black/60 group-hover:bg-rose-600 group-hover:scale-110'
+                    }`}>
+                      <FaPlay className="w-3 h-3 ml-0.5" />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="p-2 text-center">
+                  <div className={`text-[11px] font-bold truncate ${isActive ? 'text-rose-300' : 'text-slate-300'}`}>
+                    {video.badge}
+                  </div>
+                  <div className="text-[9px] text-slate-400 truncate">Tap to Play</div>
+                </div>
+              </div>
+            )
+          })}
         </div>
       </section>
 

@@ -5,7 +5,7 @@ import { FaWhatsapp, FaBookOpen, FaShieldHalved, FaPenToSquare } from 'react-ico
 import { GiGrandPiano, GiMusicalScore, GiPianoKeys, GiMetronome } from 'react-icons/gi'
 import { HiArrowRight, HiSparkles } from 'react-icons/hi2'
 
-const tags = ['All', 'Piano', 'Chords', 'Theory', 'Rhythm', 'Technique', 'Worship']
+const tags = ['All', 'Keyboard', 'Chords', 'Theory', 'Rhythm', 'Technique', 'Worship']
 
 const Blogs = () => {
   const [activeTag, setActiveTag] = useState('All')

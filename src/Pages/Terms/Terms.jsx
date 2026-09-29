@@ -42,7 +42,7 @@ const termsSections = [
     content: [
       'All courses at PraiseWave Music Academy are conducted exclusively through live, interactive 1-on-1 online classes.',
       'Classes are streamed using high-definition multi-angle camera feeds (overhead keyboard view + face view) with studio-grade direct-line instrument audio for zero background distortion.',
-      'Students must have a keyboard/digital piano at home and a stable internet connection for their live sessions.',
+      'Students must have a keyboard at home and a stable internet connection for their live sessions.',
       'Headquarters and production studio operations are located in Chennai for curriculum design and student administration.',
     ],
   },

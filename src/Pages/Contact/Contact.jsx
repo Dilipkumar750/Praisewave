@@ -19,7 +19,7 @@ const faqs = [
   },
   {
     q: 'Do I need a keyboard at home before joining?',
-    a: 'You will need a keyboard or digital piano at home for your live online lessons and daily practice. If you are planning to buy one, our instructor will happily guide you on the best model for your budget.',
+    a: 'You will need a keyboard at home for your live online lessons and daily practice. If you are planning to buy one, our instructor will happily guide you on the best model for your budget.',
   },
   {
     q: 'What is the schedule and class duration?',
@@ -62,7 +62,7 @@ const Contact = () => {
   const [form, setForm] = useState({
     name: '',
     phone: '',
-    instrument: 'Piano & Keyboard',
+    instrument: 'Keyboard',
     learningMode: 'Live 1-on-1 Online Class (Flexible Slot)',
     message: '',
   })
@@ -154,7 +154,7 @@ const Contact = () => {
                 Sound-Treated Music Production & Lesson Suites
               </h3>
               <p className="text-xs text-slate-300 leading-relaxed mb-4">
-                Equipped with acoustic pianos, premium tube amplifiers, condenser microphones, and comfortable seating for student-mentor sessions.
+                Equipped with studio keyboards, premium amplifiers, condenser microphones, and comfortable seating for student-mentor sessions.
               </p>
               <div className="flex flex-wrap items-center gap-3 text-[11px] text-slate-400">
                 <span className="flex items-center gap-1.5 text-purple-300 font-semibold">
@@ -305,11 +305,11 @@ const Contact = () => {
                   onChange={handleChange}
                   className="glass-input w-full px-4 py-3 rounded-xl text-sm cursor-pointer"
                 >
-                  <option value="Piano & Keyboard (₹1,699/mo)" className="bg-[#0b0f24] text-white">Piano & Keyboard — Beginner Basics (₹1,699/mo)</option>
+                  <option value="Keyboard (₹1,699/mo)" className="bg-[#0b0f24] text-white">Keyboard — Beginner Basics (₹1,699/mo)</option>
                   <option value="Keyboard + Music Theory (₹2,499/mo)" className="bg-[#0b0f24] text-white">Keyboard + Music Theory (₹2,499/mo)</option>
                   <option value="Intermediate Keyboard (₹2,999/mo)" className="bg-[#0b0f24] text-white">Intermediate Keyboard — Advanced Chords (₹2,999/mo)</option>
-                  <option value="Gospel Electronic Production with Mix & Mastering (₹19,999)" className="bg-[#0b0f24] text-white">Gospel Electronic Production with Mix &amp; Mastering (₹19,999)</option>
-                  <option value="Keyboard + Gospel Production Bundle (₹24,999)" className="bg-[#0b0f24] text-white">Keyboard + Gospel Production Bundle (₹24,999)</option>
+                  <option value="Electronic Production with Mix & Mastering (₹19,999)" className="bg-[#0b0f24] text-white">Electronic Production with Mix &amp; Mastering (₹19,999)</option>
+                  <option value="Keyboard + Production Bundle (₹24,999)" className="bg-[#0b0f24] text-white">Keyboard + Production Bundle (₹24,999)</option>
                 </select>
               </div>
 

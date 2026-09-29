@@ -7,7 +7,7 @@ import { FiCheck, FiArrowRight } from 'react-icons/fi'
 
 /* ─── Instruments Ticker Data ──────────────────── */
 const tickerItems = [
-  'Grand Piano & Keyboard',
+  'Keyboard Training & Technique',
   'Church-Based Keyboard Playing',
   'Keyboard Basics to Intermediate',
   'Music Theory & Sight Reading',
