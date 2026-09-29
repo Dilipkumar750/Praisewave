@@ -513,35 +513,31 @@ const GospelProduction = () => {
               <div
                 key={video.id}
                 onClick={() => handleSelectVideo(idx)}
-                className={`relative group cursor-pointer rounded-2xl overflow-hidden border transition-all duration-300 p-1.5 bg-slate-950/70 ${
-                  isActive
+                className={`relative group cursor-pointer rounded-2xl overflow-hidden border transition-all duration-300 p-1.5 bg-slate-950/70 ${isActive
                     ? 'border-rose-500 shadow-lg shadow-rose-500/20 scale-[1.02]'
                     : 'border-white/10 hover:border-rose-500/50 hover:scale-[1.01]'
-                }`}
+                  }`}
               >
                 <div className="relative aspect-video rounded-xl overflow-hidden bg-black">
                   <img
                     src={video.maxThumbnail}
                     onError={(e) => { e.target.src = video.thumbnail }}
                     alt={video.title}
-                    className={`w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 ${
-                      isActive ? 'opacity-100' : 'opacity-75 group-hover:opacity-100'
-                    }`}
+                    className={`w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 ${isActive ? 'opacity-100' : 'opacity-75 group-hover:opacity-100'
+                      }`}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80" />
 
                   {/* Badge */}
-                  <span className={`absolute top-1.5 left-1.5 px-2 py-0.5 rounded text-[9px] font-bold ${
-                    isActive ? 'bg-rose-600 text-white shadow' : 'bg-black/70 text-slate-300'
-                  }`}>
+                  <span className={`absolute top-1.5 left-1.5 px-2 py-0.5 rounded text-[9px] font-bold ${isActive ? 'bg-rose-600 text-white shadow' : 'bg-black/70 text-slate-300'
+                    }`}>
                     {video.badge}
                   </span>
 
                   {/* Small Play icon overlay */}
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className={`w-8 h-8 rounded-full flex items-center justify-center text-white transition-transform ${
-                      isActive ? 'bg-rose-600 scale-110 shadow-md' : 'bg-black/60 group-hover:bg-rose-600 group-hover:scale-110'
-                    }`}>
+                    <div className={`w-8 h-8 rounded-full flex items-center justify-center text-white transition-transform ${isActive ? 'bg-rose-600 scale-110 shadow-md' : 'bg-black/60 group-hover:bg-rose-600 group-hover:scale-110'
+                      }`}>
                       <FaPlay className="w-3 h-3 ml-0.5" />
                     </div>
                   </div>
@@ -727,7 +723,7 @@ const GospelProduction = () => {
               <div className="text-[11px] text-slate-400">Gospel Artist &amp; Worship Leader</div>
             </div>
             <div className="ml-auto flex gap-0.5">
-              {[1,2,3,4,5].map(s => (
+              {[1, 2, 3, 4, 5].map(s => (
                 <span key={s} className="text-amber-400 text-sm">★</span>
               ))}
             </div>
