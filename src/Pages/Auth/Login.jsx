@@ -243,7 +243,7 @@ const Login = () => {
           </div>
 
           <p className="text-center text-[11px] mt-6" style={{ color: '#334155' }}>
-            2026 PraiseWave Music Academy
+            © 2026 PraiseWave Music Academy
           </p>
         </div>
       </div>

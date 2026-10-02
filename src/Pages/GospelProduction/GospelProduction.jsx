@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { FaWhatsapp, FaChurch, FaYoutube, FaPlay } from 'react-icons/fa6'
 import { HiArrowRight, HiSparkles } from 'react-icons/hi2'
 import { FiCheck, FiExternalLink, FiVolume2 } from 'react-icons/fi'
@@ -14,7 +15,7 @@ import {
 const waLink = (title) =>
   `https://wa.me/919361492530?text=Hi%20PraiseWave!%20I%20want%20to%20book%20the%20${encodeURIComponent(title)}%20service.%20Please%20share%20details.`
 
-/* ─── Sample Gospel Production Videos ────────────────────── */
+/* ─── Gospel Production Videos ────────────────────────────── */
 const sampleVideos = [
   {
     id: '3W0LHTUzAAk',
@@ -24,7 +25,7 @@ const sampleVideos = [
     embedUrl: 'https://www.youtube-nocookie.com/embed/3W0LHTUzAAk?autoplay=1&rel=0',
     thumbnail: 'https://img.youtube.com/vi/3W0LHTUzAAk/hqdefault.jpg',
     maxThumbnail: 'https://img.youtube.com/vi/3W0LHTUzAAk/maxresdefault.jpg',
-    badge: 'Sample 01',
+    badge: 'Track 01',
   },
   {
     id: 'JWkAp9s5qQU',
@@ -34,7 +35,7 @@ const sampleVideos = [
     embedUrl: 'https://www.youtube-nocookie.com/embed/JWkAp9s5qQU?autoplay=1&rel=0',
     thumbnail: 'https://img.youtube.com/vi/JWkAp9s5qQU/hqdefault.jpg',
     maxThumbnail: 'https://img.youtube.com/vi/JWkAp9s5qQU/maxresdefault.jpg',
-    badge: 'Sample 02',
+    badge: 'Track 02',
   },
   {
     id: '3oSNOlbdJfI',
@@ -44,7 +45,7 @@ const sampleVideos = [
     embedUrl: 'https://www.youtube-nocookie.com/embed/3oSNOlbdJfI?autoplay=1&rel=0',
     thumbnail: 'https://img.youtube.com/vi/3oSNOlbdJfI/hqdefault.jpg',
     maxThumbnail: 'https://img.youtube.com/vi/3oSNOlbdJfI/maxresdefault.jpg',
-    badge: 'Sample 03',
+    badge: 'Track 03',
   },
   {
     id: 'ELLF1Ora0Fc',
@@ -54,7 +55,7 @@ const sampleVideos = [
     embedUrl: 'https://www.youtube-nocookie.com/embed/ELLF1Ora0Fc?autoplay=1&rel=0',
     thumbnail: 'https://img.youtube.com/vi/ELLF1Ora0Fc/hqdefault.jpg',
     maxThumbnail: 'https://img.youtube.com/vi/ELLF1Ora0Fc/maxresdefault.jpg',
-    badge: 'Sample 04',
+    badge: 'Track 04',
   },
   {
     id: 'QCdCVisTTGc',
@@ -64,7 +65,7 @@ const sampleVideos = [
     embedUrl: 'https://www.youtube-nocookie.com/embed/QCdCVisTTGc?autoplay=1&rel=0',
     thumbnail: 'https://img.youtube.com/vi/QCdCVisTTGc/hqdefault.jpg',
     maxThumbnail: 'https://img.youtube.com/vi/QCdCVisTTGc/maxresdefault.jpg',
-    badge: 'Sample 05',
+    badge: 'Track 05',
   },
   {
     id: 'o0s9Yqk0-lM',
@@ -74,7 +75,7 @@ const sampleVideos = [
     embedUrl: 'https://www.youtube-nocookie.com/embed/o0s9Yqk0-lM?autoplay=1&rel=0',
     thumbnail: 'https://img.youtube.com/vi/o0s9Yqk0-lM/hqdefault.jpg',
     maxThumbnail: 'https://img.youtube.com/vi/o0s9Yqk0-lM/maxresdefault.jpg',
-    badge: 'Sample 06',
+    badge: 'Track 06',
   },
 ]
 
@@ -209,7 +210,7 @@ const packages = [
       'Electronic & rhythm programming',
       'Live electric guitar recording',
       'Acoustic guitar recording',
-      'Vocal tuning & editing with Melodyne',
+      'Vocal tuning',
       'Complete mixing & mastering',
       'Final WAV + MP3 + Multitrack stems delivery',
     ],
@@ -224,9 +225,10 @@ const GospelProduction = () => {
   const [thumbSrc, setThumbSrc] = useState(currentVideo.maxThumbnail)
 
   const handleSelectVideo = (idx) => {
+    if (idx === activeVideoIndex) return
+    setIsPlaying(false)
     setActiveVideoIndex(idx)
     setThumbSrc(sampleVideos[idx].maxThumbnail)
-    setIsPlaying(true)
   }
 
   return (
@@ -375,18 +377,120 @@ const GospelProduction = () => {
         </div>
       </section>
 
+      {/* ─── Dual Pricing Cards ────────────────────────── */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+        <div className="text-center max-w-2xl mx-auto mb-12">
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500/10 text-amber-300 border border-amber-500/20 mb-3">
+            <HiSparkles className="w-3.5 h-3.5 text-amber-400" />
+            Production Packages
+          </span>
+          <h2 className="font-heading font-black text-2xl sm:text-3xl text-white tracking-tight">
+            Choose Your <span className="gradient-text-gold">Production Package</span>
+          </h2>
+          <p className="text-slate-400 text-sm mt-3">
+            From full electronic to live-instrument production — professionally mixed &amp; mastered per song.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {packages.map((pkg) => (
+            <div
+              key={pkg.id}
+              className={`glass-card rounded-3xl p-7 border ${pkg.border} flex flex-col`}
+              style={{ background: pkg.glow }}
+            >
+              {/* Badge + Title */}
+              <div className="mb-5">
+                <span className="text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full border mb-3 inline-block"
+                  style={{ color: pkg.accent, background: `${pkg.accent}15`, borderColor: `${pkg.accent}30` }}>
+                  {pkg.badge}
+                </span>
+                <h3 className="text-lg font-black text-white leading-snug mt-2">{pkg.title}</h3>
+              </div>
+
+              {/* Price */}
+              <div className="flex items-end gap-2 mb-1">
+                <span className="text-4xl font-black" style={{ color: pkg.accent }}>{pkg.price}</span>
+                <span className="text-slate-400 text-sm mb-1 font-medium">{pkg.sub}</span>
+              </div>
+              <p className="text-[11px] text-slate-500 italic mb-6">{pkg.note}</p>
+
+              {/* Features */}
+              <ul className="space-y-2.5 mb-8 flex-1">
+                {pkg.features.map((f) => (
+                  <li key={f} className="flex items-start gap-2.5 text-sm text-slate-300">
+                    <FiCheck className="w-4 h-4 flex-shrink-0 mt-0.5" style={{ color: pkg.accent }} />
+                    <span>{f}</span>
+                  </li>
+                ))}
+              </ul>
+
+              {/* CTA */}
+              <a
+                href={waLink(pkg.waText)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-3.5 rounded-xl font-bold text-sm text-white flex items-center justify-center gap-2 group transition-all hover:scale-[1.02] active:scale-[0.98]"
+                style={{ background: `linear-gradient(135deg, ${pkg.accent}, ${pkg.id === 'full' ? '#db2777' : '#db2777'})`, boxShadow: `0 8px 24px ${pkg.accent}30` }}
+              >
+                <FaWhatsapp className="w-4 h-4 text-emerald-300" />
+                <span>Book Service on WhatsApp</span>
+                <HiArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+              </a>
+            </div>
+          ))}
+        </div>
+
+        {/* ─── Category 3: Music Production Class Aspect ─── */}
+        <div className="mt-8 rounded-3xl p-6 sm:p-7 border border-amber-500/25 bg-gradient-to-r from-amber-950/40 via-slate-950/80 to-purple-950/30 backdrop-blur-xl flex flex-col lg:flex-row items-center justify-between gap-6 shadow-xl">
+          <div className="flex items-start sm:items-center gap-4">
+            <div className="w-12 h-12 rounded-2xl bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-2xl flex-shrink-0 shadow-md">
+              🎛️
+            </div>
+            <div>
+              <div className="flex items-center gap-2 flex-wrap mb-1">
+                <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/30">
+                  Category · 03 Classes
+                </span>
+                <span className="text-sm font-bold text-white">Want to Learn Music Production Yourself?</span>
+              </div>
+              <p className="text-xs text-slate-300 leading-relaxed">
+                Enroll in comprehensive production courses: <strong className="text-amber-300">Music Production Course (₹19,999)</strong> or <strong className="text-pink-300">Music Production + Keyboard Combo (₹24,999)</strong>.
+              </p>
+            </div>
+          </div>
+          <div className="flex items-center gap-3 w-full lg:w-auto flex-shrink-0">
+            <Link
+              to="/courses"
+              className="flex-1 lg:flex-initial text-center px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/15 text-white text-xs font-bold border border-white/15 transition-colors"
+            >
+              View Class Syllabus
+            </Link>
+            <a
+              href="https://wa.me/919361492530?text=Hi%20PraiseWave!%20I%20want%20to%20enroll%20in%20the%20Music%20Production%20Classes%20(Category%203).%20Please%20share%20details."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 lg:flex-initial inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-black text-xs shadow-lg transition-all"
+            >
+              <FaWhatsapp className="w-3.5 h-3.5" />
+              <span>Join Class</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* ─── Sample Songs Showcase Section ───────────────────── */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
         <div className="text-center max-w-2xl mx-auto mb-10">
           <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-rose-500/10 text-rose-300 border border-rose-500/25 mb-3">
             <FaYoutube className="w-4 h-4 text-rose-500" />
-            <span>Sample Production Songs (6 Tracks)</span>
+            <span>Gospel Production Work</span>
           </span>
           <h2 className="font-heading font-black text-2xl sm:text-3xl lg:text-4xl text-white tracking-tight">
             Listen to Our <span className="gradient-text-vibrant">Gospel Production Work</span>
           </h2>
           <p className="text-slate-300 text-xs sm:text-sm mt-3 leading-relaxed">
-            Experience the audio depth, arrangement quality, drum programming, and commercial mixing standard produced by Calix Joshua at PraiseWave.
+            Experience the audio depth, arrangement quality, drum programming, and commercial mixing standard produced by Calix Joshua.
           </p>
         </div>
 
@@ -414,7 +518,7 @@ const GospelProduction = () => {
                 <div className="absolute top-4 left-4 sm:top-6 sm:left-6 flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-black/70 border border-white/15 backdrop-blur-md">
                   <span className="w-2.5 h-2.5 rounded-full bg-rose-500 animate-pulse" />
                   <span className="text-xs font-bold text-white tracking-wide">
-                    {currentVideo.badge} — YouTube Sample Video
+                    {currentVideo.badge} — Gospel Production
                   </span>
                 </div>
 
@@ -428,7 +532,7 @@ const GospelProduction = () => {
                     {/* Main Button */}
                     <button
                       type="button"
-                      aria-label="Play sample video"
+                      aria-label="Play gospel production video"
                       className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-tr from-rose-600 to-purple-600 flex items-center justify-center text-white shadow-2xl border-2 border-white/30 group-hover:scale-110 transition-transform duration-300"
                     >
                       <FaPlay className="w-6 h-6 sm:w-8 sm:h-8 ml-1 text-white drop-shadow-md" />
@@ -440,7 +544,7 @@ const GospelProduction = () => {
                 <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 flex items-end justify-between gap-4">
                   <div className="max-w-xl">
                     <span className="inline-block text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded bg-purple-500/20 text-purple-300 border border-purple-500/30 mb-1.5">
-                      {currentVideo.badge} · Gospel Music Sample
+                      {currentVideo.badge} · Gospel Production
                     </span>
                     <h3 className="text-base sm:text-xl font-bold text-white leading-snug drop-shadow-md">
                       {currentVideo.title}
@@ -476,7 +580,7 @@ const GospelProduction = () => {
                 <span className="text-xs text-slate-400">PraiseWave Music Academy</span>
               </div>
               <p className="text-xs text-slate-300 max-w-xl leading-relaxed">
-                Check out this sample gospel song production showcasing beat programming, sound design, pad layering, and professional mixing quality.
+                Check out this gospel song production showcasing beat programming, sound design, pad layering, and professional mixing quality.
               </p>
             </div>
 
@@ -634,71 +738,6 @@ const GospelProduction = () => {
                 <h3 className="text-sm font-bold text-white mb-1.5">{card.title}</h3>
                 <p className="text-xs text-slate-300 leading-relaxed">{card.desc}</p>
               </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ─── Dual Pricing Cards ────────────────────────── */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
-        <div className="text-center max-w-2xl mx-auto mb-12">
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500/10 text-amber-300 border border-amber-500/20 mb-3">
-            <HiSparkles className="w-3.5 h-3.5 text-amber-400" />
-            Production Packages
-          </span>
-          <h2 className="font-heading font-black text-2xl sm:text-3xl text-white tracking-tight">
-            Choose Your <span className="gradient-text-gold">Production Package</span>
-          </h2>
-          <p className="text-slate-400 text-sm mt-3">
-            From full electronic to live-instrument production — professionally mixed &amp; mastered per song.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {packages.map((pkg) => (
-            <div
-              key={pkg.id}
-              className={`glass-card rounded-3xl p-7 border ${pkg.border} flex flex-col`}
-              style={{ background: pkg.glow }}
-            >
-              {/* Badge + Title */}
-              <div className="mb-5">
-                <span className="text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full border mb-3 inline-block"
-                  style={{ color: pkg.accent, background: `${pkg.accent}15`, borderColor: `${pkg.accent}30` }}>
-                  {pkg.badge}
-                </span>
-                <h3 className="text-lg font-black text-white leading-snug mt-2">{pkg.title}</h3>
-              </div>
-
-              {/* Price */}
-              <div className="flex items-end gap-2 mb-1">
-                <span className="text-4xl font-black" style={{ color: pkg.accent }}>{pkg.price}</span>
-                <span className="text-slate-400 text-sm mb-1 font-medium">{pkg.sub}</span>
-              </div>
-              <p className="text-[11px] text-slate-500 italic mb-6">{pkg.note}</p>
-
-              {/* Features */}
-              <ul className="space-y-2.5 mb-8 flex-1">
-                {pkg.features.map((f) => (
-                  <li key={f} className="flex items-start gap-2.5 text-sm text-slate-300">
-                    <FiCheck className="w-4 h-4 flex-shrink-0 mt-0.5" style={{ color: pkg.accent }} />
-                    <span>{f}</span>
-                  </li>
-                ))}
-              </ul>
-
-              {/* CTA */}
-              <a
-                href={waLink(pkg.waText)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full py-3.5 rounded-xl font-bold text-sm text-white flex items-center justify-center gap-2 group transition-all hover:scale-[1.02] active:scale-[0.98]"
-                style={{ background: `linear-gradient(135deg, ${pkg.accent}, ${pkg.id === 'full' ? '#db2777' : '#db2777'})`, boxShadow: `0 8px 24px ${pkg.accent}30` }}
-              >
-                <FaWhatsapp className="w-4 h-4 text-emerald-300" />
-                <span>Book Service on WhatsApp</span>
-                <HiArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
-              </a>
             </div>
           ))}
         </div>

@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react'
-import { Link, NavLink, Outlet, useNavigate } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import { Link, NavLink, Outlet, useNavigate, useLocation } from 'react-router-dom'
 import {
   FaBookOpen,
   FaSignOutAlt,
@@ -37,10 +37,12 @@ const AdminLayout = () => {
     }
   }, [navigate])
 
+  const { pathname } = useLocation()
+
   // Close sidebar on route change (mobile)
   useEffect(() => {
     setIsOpen(false)
-  }, [navigate])
+  }, [pathname])
 
   // Prevent body scroll when mobile sidebar is open
   useEffect(() => {

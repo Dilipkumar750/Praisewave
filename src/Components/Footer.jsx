@@ -92,7 +92,7 @@ const Footer = () => {
       {/* Ambient background glows */}
       <div className="absolute top-0 left-1/4 w-[500px] h-[300px] bg-purple-700/12 blur-[130px] pointer-events-none" />
       <div className="absolute bottom-0 right-1/4 w-[400px] h-[250px] bg-blue-700/10 blur-[120px] pointer-events-none" />
-      <div className="absolute top-10 right-10 w-[300px] h-[200px] bg-orange-500/08 blur-[100px] pointer-events-none" />
+      <div className="absolute top-10 right-10 w-[300px] h-[200px] bg-orange-500/10 blur-[100px] pointer-events-none" />
 
       {/* Musical Wave Accent Bar — logo gradient */}
       <div className="w-full h-1 bg-gradient-to-r from-purple-600 via-orange-500 via-yellow-400 to-cyan-500 absolute top-0 left-0" />

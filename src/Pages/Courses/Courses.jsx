@@ -177,9 +177,65 @@ const theoryPlans = [
   },
 ]
 
-/* ─── Enroll WhatsApp helper ─────────────────── */
+/* ─── Production Plans (Category 3) ──────────── */
+const productionPlans = [
+  {
+    id: 'prod-1',
+    number: '01',
+    title: 'Music Production Course',
+    subtitle: 'DAW, Beat Making & Audio Engineering',
+    category: 'Production',
+    fee: '₹19,999',
+    period: 'Complete Course',
+    desc: 'Master full modern music production — DAW workflow, gospel beat programming, sound design, chord layering, and professional mixing & mastering.',
+    features: [
+      'DAW Setup & Project Routing Workflow',
+      'Gospel Drum & Beat Programming',
+      'Worship Pad, Synth',
+      'Basic Editing',
+      'Industry Production Workflows & Project Review',
+    ],
+    cta: 'Enroll in Production (₹19,999) →',
+    accent: 'from-amber-500 to-orange-600',
+    border: 'border-amber-500/30',
+    glow: 'shadow-amber-900/30',
+    badge: 'Category 3',
+    badgeColor: 'bg-amber-500/15 text-amber-300 border-amber-500/25',
+    icon: '🎛️',
+  },
+  {
+    id: 'prod-2',
+    number: '02',
+    title: 'Music Production + Keyboard',
+    subtitle: 'Dual Mastery: Producer & Instrumentalist',
+    category: 'Production + Keyboard',
+    fee: '₹24,999',
+    period: 'Complete Bundle',
+    desc: 'The ultimate bundle combining keyboard playing skills, chords, and scales with complete DAW music production and audio engineering.',
+    features: [
+      'Gospel Keyboard Chords, Scales & Progression Analysis',
+      'Complete DAW Music Production & Beat Making',
+      'Groove Design, Synth Textures & Layering',
+      'Audio Editing & Vocal Tuning Techniques',
+      'Commercial Mixing & Mastering Workflow',
+      'Comprehensive Project Walkthroughs & Feedback',
+    ],
+    cta: 'Enroll in Combo (₹24,999) →',
+    accent: 'from-purple-600 via-pink-600 to-rose-600',
+    border: 'border-purple-500/30',
+    glow: 'shadow-purple-900/30',
+    badge: 'Best Value Bundle',
+    badgeColor: 'bg-rose-500/15 text-rose-300 border-rose-500/25',
+    icon: '🎹',
+  },
+]
+
+/* ─── Enroll WhatsApp helpers ─────────────────── */
 const waLink = (title) =>
   `https://wa.me/919361492530?text=Hi%20PraiseWave!%20I%20want%20to%20enroll%20in%20${encodeURIComponent(title)}%20(8%20Classes/Month,%2045-50%20mins).%20Please%20share%20available%20slots.`
+
+const waProductionLink = (title, fee) =>
+  `https://wa.me/919361492530?text=Hi%20PraiseWave!%20I%20want%20to%20enroll%20in%20${encodeURIComponent(title)}%20(${encodeURIComponent(fee)}).%20Please%20share%20enrollment%20details.`
 
 /* ─── Reusable Feature List ──────────────────── */
 const FeatureList = ({ features }) => (
@@ -311,15 +367,67 @@ const TheoryCard = ({ plan }) => (
   </div>
 )
 
+/* ─── Production Card Component ──────────────── */
+const ProductionCard = ({ plan }) => (
+  <div
+    className={`glass-card glass-card-hover rounded-3xl flex flex-col border ${plan.border} shadow-2xl ${plan.glow} overflow-hidden transition-all duration-300`}
+  >
+    <div className={`h-1.5 w-full bg-gradient-to-r ${plan.accent}`} />
+    <div className="p-7 pt-6 flex flex-col flex-1">
+      <div className="flex items-start justify-between mb-5">
+        <div className={`w-12 h-12 rounded-2xl bg-gradient-to-tr ${plan.accent} flex items-center justify-center text-xl text-white shadow-md`}>
+          {plan.icon}
+        </div>
+        <span className={`px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider border ${plan.badgeColor}`}>
+          {plan.badge}
+        </span>
+      </div>
+      <div className="mb-1">
+        <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">
+          {plan.number}
+        </span>
+      </div>
+      <h2 className="text-xl font-extrabold text-white mb-1 leading-tight">{plan.title}</h2>
+
+      {/* Fee & Period */}
+      <div className="flex items-baseline gap-1 mb-4">
+        <span className="text-2xl font-black gradient-text-gold">{plan.fee}</span>
+        <span className="text-xs text-slate-400 font-semibold">{plan.period}</span>
+      </div>
+
+      <p className="text-sm text-slate-400 leading-relaxed mb-5">{plan.desc}</p>
+
+      <div className="pt-4 border-t border-white/10 flex-1 mb-6">
+        <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-3">
+          Course Structure &amp; Syllabus:
+        </div>
+        <FeatureList features={plan.features} />
+      </div>
+
+      <a
+        href={waProductionLink(plan.title, plan.fee)}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="btn-primary w-full !text-xs !py-3 flex items-center justify-center gap-2 group mt-auto"
+      >
+        <FaWhatsapp className="w-3.5 h-3.5 text-emerald-300" />
+        <span>{plan.cta}</span>
+        <HiArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+      </a>
+    </div>
+  </div>
+)
+
 const Courses = () => {
   const [activeTab, setActiveTab] = useState('all')
 
-  const totalCount = keyboardPlans.length + theoryPlans.length
+  const totalCount = keyboardPlans.length + theoryPlans.length + productionPlans.length
 
   const tabs = [
     { id: 'all', label: '✨ All Courses', count: totalCount },
     { id: 'keyboard', label: '🎹 Keyboard Courses', count: keyboardPlans.length },
     { id: 'theory', label: '🎼 Music Theory', count: theoryPlans.length },
+    { id: 'production', label: '🎛️ Music Production', count: productionPlans.length },
   ]
 
   return (
@@ -464,6 +572,36 @@ const Courses = () => {
               ))}
             </div>
           </div>
+
+          {/* Production Section in All (Category 03) */}
+          <div>
+            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3 mb-8 border-b border-white/10 pb-4">
+              <div>
+                <span className="text-[11px] font-bold text-amber-400 uppercase tracking-widest">
+                  Category · 03
+                </span>
+                <h2 className="font-heading font-extrabold text-2xl sm:text-3xl text-white flex items-center gap-2 mt-1">
+                  🎛️ Music Production Classes
+                </h2>
+                <p className="text-xs text-slate-400 mt-1">
+                  Comprehensive Curriculum · DAW, Beat Production, Sound Design &amp; Mixing
+                </p>
+              </div>
+              <button
+                type="button"
+                onClick={() => setActiveTab('production')}
+                className="text-xs font-bold text-amber-400 hover:text-amber-300 flex items-center gap-1 transition-colors self-start sm:self-auto"
+              >
+                <span>View Only Production ({productionPlans.length})</span>
+                <span>→</span>
+              </button>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              {productionPlans.map((plan) => (
+                <ProductionCard key={plan.id} plan={plan} />
+              ))}
+            </div>
+          </div>
         </div>
       )}
 
@@ -481,6 +619,15 @@ const Courses = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20 animate-fadeIn">
           {theoryPlans.map((plan) => (
             <TheoryCard key={plan.id} plan={plan} />
+          ))}
+        </div>
+      )}
+
+      {/* ─── Production Only Tab (Category 3) ─────── */}
+      {activeTab === 'production' && (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-20 animate-fadeIn">
+          {productionPlans.map((plan) => (
+            <ProductionCard key={plan.id} plan={plan} />
           ))}
         </div>
       )}
