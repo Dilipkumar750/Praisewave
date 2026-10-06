@@ -43,7 +43,7 @@ const Hero = () => {
   const current = featuredInstruments[activeIdx]
 
   return (
-    <section className="relative min-h-[92vh] flex items-center pt-28 pb-20 overflow-hidden">
+    <section className="relative min-h-[92vh] flex items-center pt-24 md:pt-28 pb-16 md:pb-20 overflow-hidden">
       {/* ─── Ambient Glow Mesh — logo colors ────────── */}
       {/* Purple — piano lid top */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-purple-700/18 blur-[150px] rounded-full pointer-events-none -z-10 animate-glow" />
@@ -55,10 +55,10 @@ const Hero = () => {
       <div className="absolute bottom-10 right-1/3 w-[280px] h-[280px] bg-cyan-600/10 blur-[100px] rounded-full pointer-events-none -z-10" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 md:gap-10 lg:gap-8 items-center">
 
           {/* ─── Left Column: Hero Typography & CTAs ──── */}
-          <div className="lg:col-span-7 flex flex-col items-start text-left">
+          <div className="md:col-span-1 lg:col-span-7 flex flex-col items-start text-left">
 
             {/* Season & Pricing Badge */}
             <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full glass-pill border border-orange-400/25 mb-6 text-xs font-semibold animate-badge-pulse">
@@ -84,7 +84,7 @@ const Hero = () => {
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto mb-12">
               <a
-                href="https://id-preview--a3e98e3c-c717-4307-8bd9-33436b07bb93.lovable.app/?__lovable_token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMUhtRVNYUFZ2Nk5IdlQxUUxnU1BmTlVVRnpGMyIsInByb2plY3RfaWQiOiJhM2U5OGUzYy1jNzE3LTQzMDctOGJkOS0zMzQzNmIwN2JiOTMiLCJhY2Nlc3NfdHlwZSI6InByb2plY3QiLCJpc3OiOiJsb3ZhYmxlLWFwaSIsInN1YiI6ImEzZTk4ZTNjLWM3MTctNDMwNy04YmQ5LTMzNDM2YjA3YmI5MyIsImF1ZCI6WyJsb3ZhYmxlLWFwcCJdLCJleHAiOjE3NzUxMzc4MzEsIm5iZiI6MTc3NDUzMzAzMSwiaWF0IjoxNzc0NTMzMDMxfQ.Fk8eKFok4N5j5qt2c7lunbsOPVpLee-bSyFS4Cbe5t532vFiLpLgkKbCIMd3iDIPu22wo9RyWfPjb2h7h2T3kr1Z5pqISozEQXZ-Y9EZaNydtHjCpoL9CQHZpcSVoGnNgivTNrFKgoDfl1BsseKvebANADdh7cjIvTMQMDAiqHnmcJFRg5_v1iUeD52DxEQ6FBq-dilmvv3OwZoPSz0M0i-EFhwBrCqHnW6yBOOj8scH7v7Kvm4fzUcO3CiJYUHAP0VPnViyR8i-cPjHzOl5zpyFrZaygNazo-g5p424UVuLg5tQS8ab8rih_TJfE8wgK4W2ng_ob2fh2JfPdbJEUoYHjN_YFLe9ODTsj44X2MK9RjvemMLWxrBGOwWTFTpVAvXfXzWFM70DGKbOA0UfWpJiIF5sqo0V3JZH4nDc8kaeHRqpDE-_D1JjWeG7x6Y8Pa22ZgViWPG-vHpgn2ZOMyPth_tzG4RS8h6wiNv1h9XMmLmPvYdgOgBfjKcMC-vAsr8Ty3QyubDI3ErHFX3FykKbqmU5kVeo3jo-fdv4wI4VmHDyqQLXLl6tq_F2IeiBTqJjB23c0znd7nsIqFyxmD2G_H7MjrmDcd7NudvHCslR2eYcHls0pidiv4WyEgKVszef_a-UQTmsIag30CkmEx97yxiosfBjZpBTcxoE89I#enroll"
+                href="https://wa.me/919361492530?text=Hi%20PraiseWave!%20I%20want%20to%20enroll%20and%20begin%20my%20keyboard%20journey."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary flex items-center justify-center gap-3 text-sm py-3.5 px-7 shadow-xl shadow-purple-900/30 group"
@@ -131,7 +131,7 @@ const Hero = () => {
           </div>
 
           {/* ─── Right Column: Interactive Studio Console ──── */}
-          <div className="lg:col-span-5 relative">
+          <div className="md:col-span-1 lg:col-span-5 relative">
 
             {/* Glowing Backdrop Frame */}
             <div className="relative glass-card rounded-3xl p-6 sm:p-8 border border-white/15 overflow-hidden shadow-2xl">

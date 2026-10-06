@@ -245,7 +245,7 @@ const GospelProduction = () => {
           style={{ background: 'radial-gradient(circle, rgba(249,115,22,0.30) 0%, transparent 65%)', filter: 'blur(80px)' }} />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 items-center">
 
             {/* Left: Copy */}
             <div className="flex flex-col">
@@ -610,7 +610,7 @@ const GospelProduction = () => {
         </div>
 
         {/* 6 Video Selector Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3.5 mt-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-3 md:gap-3.5 mt-6">
           {sampleVideos.map((video, idx) => {
             const isActive = idx === activeVideoIndex
             return (
@@ -671,7 +671,7 @@ const GospelProduction = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 md:gap-6">
           {modules.map((mod, idx) => (
             <div
               key={mod.title}

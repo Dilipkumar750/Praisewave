@@ -81,7 +81,7 @@ const Contact = () => {
   }
 
   return (
-    <div className="pt-28 pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div className="pt-24 md:pt-28 pb-20 md:pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       {/* ─── Hero Header ────────────────────────────── */}
       <div className="text-center max-w-3xl mx-auto mb-16">
         <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-purple-500/10 text-purple-300 border border-purple-500/20 mb-4">
@@ -95,9 +95,9 @@ const Contact = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 md:gap-10 items-start">
         {/* ─── Left Column: Contact Methods & FAQ ──── */}
-        <div className="lg:col-span-6 flex flex-col gap-8">
+        <div className="md:col-span-1 lg:col-span-6 flex flex-col gap-6 md:gap-8">
 
           {/* Quick Contact Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -239,7 +239,7 @@ const Contact = () => {
         </div>
 
         {/* ─── Right Column: Luxury Trial Booking Form ──── */}
-        <div className="lg:col-span-6 lg:sticky lg:top-28">
+        <div className="md:col-span-1 lg:col-span-6 lg:sticky lg:top-28">
           <div className="glass-card rounded-3xl p-6 sm:p-9 border border-white/15 shadow-2xl">
             <div className="mb-8">
               <span className="text-[11px] font-bold text-cyan-400 uppercase tracking-widest bg-cyan-500/10 px-3 py-1 rounded-full border border-cyan-400/20">

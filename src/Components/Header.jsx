@@ -56,12 +56,12 @@ const Header = () => {
   }, [pathname])
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 lg:px-8 pt-3 sm:pt-4 transition-all duration-300">
+    <header className="fixed top-0 left-0 right-0 z-50 px-3 sm:px-5 lg:px-8 pt-3 sm:pt-4 transition-all duration-300">
       <div
         className={`max-w-7xl mx-auto rounded-2xl sm:rounded-full transition-all duration-300 ${scrolled
-            ? 'glass-nav shadow-2xl shadow-purple-950/40 py-2.5 px-5 sm:px-6 border border-white/15'
-            : 'bg-slate-950/60 backdrop-blur-xl py-3 px-5 sm:px-6 border border-white/10'
-          } flex items-center justify-between`}
+            ? 'glass-nav shadow-2xl shadow-purple-950/40 py-2 px-4 sm:px-5 border border-white/15'
+            : 'bg-slate-950/60 backdrop-blur-xl py-2.5 px-4 sm:px-5 border border-white/10'
+          } flex items-center justify-between gap-2`}
       >
         {/* ─── Brand Logo ───────────────────────────── */}
         <Link to="/" className="flex items-center gap-3 group flex-shrink-0">
@@ -85,15 +85,15 @@ const Header = () => {
           </div>
         </Link>
 
-        {/* ─── Clean Desktop Navigation Links ────────────────────── */}
-        <nav className="hidden lg:flex items-center gap-1.5 glass-pill px-4 py-1.5 rounded-full border border-white/10">
+        {/* ─── Navigation Links — tablet (md) and desktop (lg) ────── */}
+        <nav className="hidden md:flex items-center gap-0.5 lg:gap-1.5 glass-pill px-2 lg:px-4 py-1.5 rounded-full border border-white/10 flex-1 mx-2 lg:mx-0 lg:flex-initial justify-center overflow-x-auto">
           {navLinks.map(({ label, path }) => (
             <NavLink
               key={path}
               to={path}
               end={path === '/'}
               className={({ isActive }) =>
-                `relative px-4 py-2 text-xs font-semibold tracking-wide rounded-full transition-all duration-200 ${isActive
+                `relative px-2 md:px-2.5 lg:px-4 py-1.5 lg:py-2 text-[11px] lg:text-xs font-semibold tracking-wide rounded-full transition-all duration-200 whitespace-nowrap ${isActive
                   ? 'text-white bg-gradient-to-r from-purple-600/80 to-cyan-600/60 shadow-sm shadow-purple-500/30 font-bold'
                   : 'text-slate-300 hover:text-white hover:bg-white/5'
                 }`
@@ -104,8 +104,8 @@ const Header = () => {
           ))}
         </nav>
 
-        {/* ─── Desktop Right Actions ────────────────── */}
-        <div className="hidden md:flex items-center gap-3 flex-shrink-0">
+        {/* ─── Desktop Right Actions (lg+) ──────────── */}
+        <div className="hidden lg:flex items-center gap-3 flex-shrink-0">
           <a
             href="tel:+919361492530"
             className="flex items-center gap-2 text-xs font-semibold text-slate-300 hover:text-cyan-300 transition-colors py-2.5 px-4 rounded-full glass-pill border border-white/10 hover:border-cyan-400/30"
@@ -135,7 +135,7 @@ const Header = () => {
           </div>
         </div>
 
-        {/* ─── Mobile Right Actions ───────────────────── */}
+        {/* ─── Mobile Right Actions (< md) ────────────── */}
         <div className="flex md:hidden items-center gap-2">
           {/* Quick WhatsApp on Mobile */}
           <a
@@ -164,7 +164,7 @@ const Header = () => {
         </div>
       </div>
 
-      {/* ─── Mobile Menu Drawer ─────────────────────── */}
+      {/* ─── Mobile Menu Drawer (< md) ─────────────── */}
       <div
         className={`md:hidden transition-all duration-300 overflow-hidden ${mobileMenuOpen ? 'max-h-[30rem] opacity-100 mt-2.5' : 'max-h-0 opacity-0 pointer-events-none'
           }`}

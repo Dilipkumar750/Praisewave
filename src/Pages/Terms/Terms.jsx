@@ -68,7 +68,7 @@ const termsSections = [
 
 const Terms = () => {
   return (
-    <div className="pt-28 pb-24 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+    <div className="pt-24 md:pt-28 pb-20 md:pb-24 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
       {/* ─── Header ─────────────────────────────────── */}
       <div className="text-center max-w-3xl mx-auto mb-14">
         <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-purple-500/10 text-purple-300 border border-purple-500/20 mb-4">

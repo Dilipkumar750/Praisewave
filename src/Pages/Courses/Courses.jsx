@@ -431,7 +431,7 @@ const Courses = () => {
   ]
 
   return (
-    <div className="pt-28 pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div className="pt-24 md:pt-28 pb-20 md:pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       {/* ─── Page Header ──────────────────────── */}
       <div className="text-center max-w-3xl mx-auto mb-10">
         <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-purple-500/10 text-purple-300 border border-purple-500/20 mb-4">
@@ -536,7 +536,7 @@ const Courses = () => {
                 <span>→</span>
               </button>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
               {keyboardPlans.map((plan) => (
                 <KeyboardCard key={plan.id} plan={plan} />
               ))}
@@ -566,7 +566,7 @@ const Courses = () => {
                 <span>→</span>
               </button>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
               {theoryPlans.map((plan) => (
                 <TheoryCard key={plan.id} plan={plan} />
               ))}
@@ -596,7 +596,7 @@ const Courses = () => {
                 <span>→</span>
               </button>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
               {productionPlans.map((plan) => (
                 <ProductionCard key={plan.id} plan={plan} />
               ))}
@@ -607,7 +607,7 @@ const Courses = () => {
 
       {/* ─── Keyboard Only Tab ───────────────────── */}
       {activeTab === 'keyboard' && (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20 animate-fadeIn">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-20 animate-fadeIn">
           {keyboardPlans.map((plan) => (
             <KeyboardCard key={plan.id} plan={plan} />
           ))}
@@ -616,7 +616,7 @@ const Courses = () => {
 
       {/* ─── Theory Only Tab ─────────────────────── */}
       {activeTab === 'theory' && (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20 animate-fadeIn">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-20 animate-fadeIn">
           {theoryPlans.map((plan) => (
             <TheoryCard key={plan.id} plan={plan} />
           ))}
@@ -625,7 +625,7 @@ const Courses = () => {
 
       {/* ─── Production Only Tab (Category 3) ─────── */}
       {activeTab === 'production' && (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-20 animate-fadeIn">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto mb-20 animate-fadeIn">
           {productionPlans.map((plan) => (
             <ProductionCard key={plan.id} plan={plan} />
           ))}

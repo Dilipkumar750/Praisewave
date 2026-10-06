@@ -98,7 +98,7 @@ const BlogDetail = () => {
   }
 
   return (
-    <article className="pt-28 pb-24 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+    <article className="pt-24 md:pt-28 pb-20 md:pb-24 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
       {/* ─── Breadcrumbs & Navigation ─────────────── */}
       <div className="flex flex-wrap items-center justify-between gap-4 mb-8 pb-4 border-b border-white/10 text-xs">
         <div className="flex items-center gap-2 text-slate-400">

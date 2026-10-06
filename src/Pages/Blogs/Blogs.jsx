@@ -36,7 +36,7 @@ const Blogs = () => {
   const getKey = (b) => b.slug || b.numericId || b.id || b._id
 
   return (
-    <div className="pt-28 pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div className="pt-24 md:pt-28 pb-20 md:pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       {/* ─── Header ─────────────────────────────────── */}
       <div className="text-center max-w-3xl mx-auto mb-12">
         <div className="flex items-center justify-center gap-2 mb-4">
@@ -84,8 +84,8 @@ const Blogs = () => {
       {/* ─── Featured Article Banner (When 'All' selected) ──── */}
       {activeTag === 'All' && featuredArticle && (
         <div className="glass-card rounded-3xl p-6 sm:p-10 border border-white/15 shadow-2xl mb-14 overflow-hidden relative group">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            <div className="lg:col-span-7">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 md:gap-8 items-center">
+            <div className="md:col-span-1 lg:col-span-7">
               <div className="flex items-center gap-3 mb-4">
                 <span className="px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-purple-500/20 text-purple-300 border border-purple-500/30">
                   Featured Masterclass
@@ -133,7 +133,7 @@ const Blogs = () => {
               </div>
             </div>
 
-            <div className="lg:col-span-5 flex items-center justify-center">
+            <div className="md:col-span-1 lg:col-span-5 flex items-center justify-center">
               <Link
                 to={`/blogs/${getKey(featuredArticle)}`}
                 className="w-full h-56 sm:h-72 rounded-2xl overflow-hidden border border-purple-500/30 relative group/img shadow-xl block"
@@ -164,7 +164,7 @@ const Blogs = () => {
           Loading masterclass articles...
         </div>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-16 md:mb-20">
           {gridArticles.map((blog) => {
             const blogKey = getKey(blog)
             return (

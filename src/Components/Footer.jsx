@@ -98,10 +98,10 @@ const Footer = () => {
       <div className="w-full h-1 bg-gradient-to-r from-purple-600 via-orange-500 via-yellow-400 to-cyan-500 absolute top-0 left-0" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 mb-14">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 md:gap-10 mb-12 md:mb-14">
 
-          {/* Brand Col (4 cols) */}
-          <div className="lg:col-span-4 flex flex-col gap-4">
+          {/* Brand Col (full width on mobile, half on tablet, 4 cols on desktop) */}
+          <div className="md:col-span-1 lg:col-span-4 flex flex-col gap-4">
             <Link to="/" className="flex items-center gap-3 group">
               <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-purple-700 via-orange-500 to-yellow-400 p-[1.5px] shadow-lg shadow-purple-600/25 group-hover:scale-105 transition-transform">
                 <div className="w-full h-full bg-white rounded-2xl p-0.5 overflow-hidden flex items-center justify-center">
@@ -176,8 +176,8 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Links Columns (8 cols split across 3 columns) */}
-          <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-3 gap-8">
+          {/* Links Columns (full width on mobile, half on tablet, 8 cols on desktop) */}
+          <div className="md:col-span-1 lg:col-span-8 grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
             {footerSections.map((sec) => (
               <div key={sec.title} className="flex flex-col gap-3">
                 <h3 className="text-xs font-bold uppercase tracking-wider text-slate-200 border-b border-white/10 pb-2 flex items-center gap-2">

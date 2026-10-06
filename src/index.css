@@ -454,3 +454,59 @@ body {
     0 24px 56px rgba(249, 115, 22, 0.20),
     0 0 40px rgba(251, 191, 36, 0.10);
 }
+
+/* ─── Tablet-Specific Styles (768px – 1023px) ── */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Prevent badge text overflow on mid-size screens */
+  .animate-badge-pulse {
+    flex-wrap: wrap;
+    max-width: 100%;
+  }
+
+  /* Ensure button groups don't overflow */
+  .btn-primary,
+  .btn-secondary,
+  .btn-whatsapp {
+    white-space: normal;
+    text-align: center;
+  }
+
+  /* Better card spacing on tablet */
+  .glass-card {
+    padding: clamp(1.25rem, 3vw, 1.75rem);
+  }
+
+  /* WhatsApp float button tablet position */
+  .whatsapp-float {
+    bottom: 24px;
+    right: 24px;
+    width: 54px;
+    height: 54px;
+  }
+
+  /* Smooth scrolling on tablets */
+  html {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Fix overflow for ticker on tablets */
+  .animate-ticker {
+    gap: 1.5rem;
+  }
+}
+
+/* ─── All-Device Touch Improvements ──────────── */
+@media (max-width: 1023px) {
+  /* Smoother tap/click on touch devices */
+  a,
+  button {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Prevent horizontal scroll edge cases */
+  .glass-card,
+  .glass-nav,
+  .glass-pill {
+    max-width: 100%;
+  }
+}
