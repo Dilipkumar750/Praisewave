@@ -213,7 +213,7 @@ const Testimonials = () => {
                 <span className="w-5 h-5 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center mt-0.5 flex-shrink-0">
                   <FiCheck className="w-3.5 h-3.5" />
                 </span>
-                <span><strong>Affordable Fee Structure:</strong> High-quality 1-on-1 instruction accessible at transparent pricing from ₹1,699/mo.</span>
+                <span><strong>Affordable Fee Structure:</strong> High-quality 1-on-1 instruction accessible at transparent pricing from ₹2,499/mo.</span>
               </li>
             </ul>
           </div>

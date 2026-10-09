@@ -305,8 +305,8 @@ const Contact = () => {
                   onChange={handleChange}
                   className="glass-input w-full px-4 py-3 rounded-xl text-sm cursor-pointer"
                 >
-                  <option value="Keyboard (₹1,699/mo)" className="bg-[#0b0f24] text-white">Keyboard — Beginner Basics (₹1,699/mo)</option>
-                  <option value="Keyboard + Music Theory (₹2,499/mo)" className="bg-[#0b0f24] text-white">Keyboard + Music Theory (₹2,499/mo)</option>
+                  <option value="Keyboard (₹2,499/mo)" className="bg-[#0b0f24] text-white">Keyboard — Beginner Basics (₹2,499/mo)</option>
+                  <option value="Keyboard + Music Theory (₹2,799/mo)" className="bg-[#0b0f24] text-white">Keyboard + Music Theory (₹2,799/mo)</option>
                   <option value="Intermediate Keyboard (₹2,999/mo)" className="bg-[#0b0f24] text-white">Intermediate Keyboard — Advanced Chords (₹2,999/mo)</option>
                   <option value="Electronic Production with Mix & Mastering (₹19,999)" className="bg-[#0b0f24] text-white">Electronic Production with Mix &amp; Mastering (₹19,999)</option>
                   <option value="Keyboard + Production Bundle (₹24,999)" className="bg-[#0b0f24] text-white">Keyboard + Production Bundle (₹24,999)</option>

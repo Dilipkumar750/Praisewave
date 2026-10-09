@@ -30,7 +30,7 @@ const termsSections = [
     title: '3. Fees & Payment Terms',
     icon: <FaCreditCard className="w-5 h-5 text-amber-400" />,
     content: [
-      'Monthly course fees (e.g. Keyboard Basics at ₹1,699/mo, Keyboard + Theory at ₹2,499/mo, Intermediate at ₹2,999/mo) are payable at the start of each 8-class monthly cycle.',
+      'Monthly course fees (e.g. Keyboard Basics at ₹2,499/mo, Keyboard + Theory at ₹2,499/mo, Intermediate at ₹2,799/mo) are payable at the start of each 8-class monthly cycle.',
       'Gospel Electronic Production programs (₹19,999 budget package) and bundle courses are payable as per agreed package milestones.',
       'All payments are transparent with no hidden charges. Practice notes and digital exercises are included.',
     ],

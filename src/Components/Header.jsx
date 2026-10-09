@@ -17,7 +17,7 @@ const socialLinks = [
   {
     name: 'Instagram',
     icon: FaInstagram,
-    url: 'https://www.instagram.com/praisewavemusic',
+    url: 'https://www.instagram.com/praisewave_music_academy',
     color: 'hover:text-[#E1306C] hover:bg-[#E1306C]/15 hover:border-[#E1306C]/40',
   },
   {
@@ -29,7 +29,7 @@ const socialLinks = [
   {
     name: 'Facebook',
     icon: FaFacebookF,
-    url: 'https://www.facebook.com/praisewavemusic',
+    url: 'https://www.facebook.com/share/1ESb2cgnVF/?mibextid=wwXIfr',
     color: 'hover:text-[#1877F2] hover:bg-[#1877F2]/15 hover:border-[#1877F2]/40',
   },
   {

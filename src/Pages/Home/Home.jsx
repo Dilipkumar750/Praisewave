@@ -276,7 +276,7 @@ const Home = () => {
               <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">
                 Get full access to the complete beginner keyboard syllabus, guided mentorship, and practice stems.
               </p>
-              <div className="text-3xl font-black gradient-text-gold mb-1">₹1,699</div>
+              <div className="text-3xl font-black gradient-text-gold mb-1">₹2,499</div>
               <div className="text-[11px] text-slate-300 font-medium">Monthly 8 Classes · 45–50 Mins / Class</div>
               <div className="text-[10px] text-cyan-400 mt-0.5">Flexible Available Slots</div>
             </div>
@@ -287,7 +287,7 @@ const Home = () => {
               rel="noopener noreferrer"
               className="btn-primary !text-xs !py-3 w-full mt-6 flex items-center justify-center gap-2 group"
             >
-              <span>Enroll Now at ₹1,699/mo</span>
+              <span>Enroll Now at ₹2,499/mo</span>
               <HiArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
             </a>
           </div>

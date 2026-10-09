@@ -39,8 +39,8 @@ const footerSections = [
     title: 'Keyboard Programs',
     icon: <GiGrandPiano className="w-4 h-4 text-cyan-400" />,
     links: [
-      { label: 'Keyboard Basics (₹1,699/mo)', path: '/courses', icon: <GiPianoKeys className="w-3 h-3 text-cyan-400" /> },
-      { label: 'Keyboard + Theory (₹2,499/mo)', path: '/courses', icon: <GiMusicalScore className="w-3 h-3 text-purple-400" /> },
+      { label: 'Keyboard Basics (₹2,499/mo)', path: '/courses', icon: <GiPianoKeys className="w-3 h-3 text-cyan-400" /> },
+      { label: 'Keyboard + Theory (₹2,799/mo)', path: '/courses', icon: <GiMusicalScore className="w-3 h-3 text-purple-400" /> },
       { label: 'Intermediate Keyboard (₹2,999/mo)', path: '/courses', icon: <GiGrandPiano className="w-3 h-3 text-amber-400" /> },
       { label: 'Monthly 8 Classes (45–50 Mins)', path: '/courses', icon: <FaCalendarDays className="w-3 h-3 text-emerald-400" /> },
       { label: 'Church & Worship Playing', path: '/courses', icon: <FaChurch className="w-3 h-3 text-rose-400" /> },
@@ -63,7 +63,7 @@ const socialLinks = [
   {
     name: 'Instagram',
     icon: FaInstagram,
-    url: 'https://www.instagram.com/praisewavemusic',
+    url: 'https://www.instagram.com/praisewave_music_academy',
     color: 'hover:text-[#E1306C] hover:bg-[#E1306C]/15 hover:border-[#E1306C]/40',
   },
   {
@@ -75,7 +75,7 @@ const socialLinks = [
   {
     name: 'Facebook',
     icon: FaFacebookF,
-    url: 'https://www.facebook.com/praisewavemusic',
+    url: 'https://www.facebook.com/share/1ESb2cgnVF/?mibextid=wwXIfr',
     color: 'hover:text-[#1877F2] hover:bg-[#1877F2]/15 hover:border-[#1877F2]/40',
   },
   {
@@ -131,10 +131,10 @@ const Footer = () => {
               <div className="flex items-start gap-2.5">
                 <FiMapPin className="w-4 h-4 text-pink-400 flex-shrink-0 mt-0.5" />
                 <div className="text-xs text-slate-300 leading-relaxed">
-                  <strong className="text-white block font-semibold mb-0.5">Chennai Studio Academy:</strong>
-                  Vasudeva Garden, No 26/24b, 2nd Ave, Anna Ayyar Thottam, Ponniammanmedu, Chennai, Tamil Nadu 600110
+                  <strong className="text-white block font-semibold mb-0.5">Praisewave Music Academy:</strong>
+                  Vasu deva Garden, 2nd St, Ponniammanmedu, Chennai 600110
                   <a
-                    href="https://maps.google.com/?q=Vasudeva+Garden+No+26/24b+2nd+Ave+Anna+Ayyar+Thottam+Ponniammanmedu+Chennai+Tamil+Nadu+600110"
+                    href="https://maps.google.com/?q=Vasudeva+Garden+2nd+Street+Ponniammanmedu+Chennai+600110"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block text-cyan-400 hover:text-cyan-300 font-semibold mt-1"
